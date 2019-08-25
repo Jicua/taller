@@ -6,5 +6,6 @@ Identificación del problema, objetivos general y específicos
 Primera reunión con el cliente, familiarización con el funcionamiento del negocio, especificación de alcance del proyecto
 ### Sábado 24 de agosto
 Investigación de posibles herramientas a ultizar para la automatización de la comunicación con el cliente (Selenium, Python)
+
 Cerrar Issue: Identificación del problema 1
 ### Domingo 25 de agosto
