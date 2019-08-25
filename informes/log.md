@@ -10,3 +10,4 @@ Investigación de posibles herramientas a ultizar para la automatización de la 
 Cerrar Issue: Identificación del problema 1
 ### Domingo 25 de agosto
 Cerrar Issue: Identificación del problema 2
+Cerrar Issue: Introducción
