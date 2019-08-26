@@ -16,7 +16,7 @@ Esta frase ejemplifica la importancia de WhatsApp y su influencia en el público
 
 WhatsApp es usado en más de 180 países alrededor del mundo, tiene más del 40% de cuota de mercado, más de 1.500 millones de usuarios y es el líder indiscutido del mercado. 
 
-Fuente:https://chatbotsmagazine.com/a-step-by-step-guide-to-creating-whatsapp-chatbot-for-business-275dc3924b17
+Fuente: https://chatbotsmagazine.com/a-step-by-step-guide-to-creating-whatsapp-chatbot-for-business-275dc3924b17
 
 En la gran mayoría de las empresas existe una persona encarga de responder a los mensajes. Esto tiene varios inconvenientes, tanto desde el punto de vista de la empresa como del cliente. Para la empresa se gastan recursos al tener a una persona dedicada a esta labor y para el cliente, ya que no siempre recibe una atención inmediata pues el encargado puede estar ocupado o atendiendo a otras solicitudes. En contraste al reemplazarse esta persona por un sistema automatizado, se ahorran recursos y se mejora la atención al cliente.
 
