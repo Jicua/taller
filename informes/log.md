@@ -12,3 +12,10 @@ Cerrar Issue: Identificación del problema 1
 Cerrar Issue: Identificación del problema 2
 
 Cerrar Issue: Introducción
+
+Cerrar Issue: Marco Teórico
+
+Grabación del Pitch
+### Lunes 26 de agosto
+Replanteamiento de la solución al problema 
+
