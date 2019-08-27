@@ -1,8 +1,8 @@
 Introducción
 ------------
 
-Nuestro proyecto de seminario de título es una solución tecnológica que implementaremos en el taller mecánico automotriz “Lüer”. Esta solución tecnológica se basa principalmente en mejorar la comunicación entre el taller y sus clientes, automatizando el proceso mediante un sistema de mensajería instantánea que podrá asignar un horario de recepción del vehículo al taller, informar de los avances en la reparación y cuando esté listo para retirarlo. 
+El proyecto consiste en proveer una solución informática para el taller mecánico automotriz “Lüer”. Con esta solución se mejorarán carencias actuales en la organización interna del taller y en la comunicación entre el taller y sus clientes, como el desorden en los horarios de trabajo y la pérdida de clientes potenciales por llamadas perdidas.
 
-El mecánico podrá ver las horas agendadas en una aplicación móvil, lo que le permitirá organizar su horario de trabajo.
+La solución consiste en una aplicación que lleve un registro con fichas de todos los clientes del taller y sus vehículos. Esto permitirá al dueño tener siempre disponible información relevante sobre los clientes y sus vehículos. Además contará con una interfaz web que permitirá a los clientes del taller reservar citas para llevar su vehículo al taller. El dueño del taller podrá visualizar las citas que han sido tomadas, para poder organizar mejor su horario de trabajo. Una vez que el cliente deje su vehículo en el taller se le entregará un código que le permitirá hacer un seguimiento de los avances en la reparación de su vehículo y ver cuándo esté listo para ser retirado.
 
-Además, la aplicación guardará información sobre los clientes del taller con la que podrá notificarlos cuando les corresponda llevar sus vehículos a la revisión técnica, realizar un cambio de aceite, mantención programada, etc.
+Las fichas guardarán información útil para el cliente como por ejemplo cuándo vence la revisión técnica de un vehículo, para  que el taller pueda notificar al cliente dueño de ese vehículo antes de que venza, lo que ayudará a la fidelización de los clientes para que vuelvan a traer sus vehículos al taller en el futuro.
