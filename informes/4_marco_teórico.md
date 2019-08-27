@@ -16,19 +16,16 @@ Esta frase ejemplifica la importancia de WhatsApp y su influencia en el público
 
 WhatsApp es usado en más de 180 países alrededor del mundo, tiene más del 40% de cuota de mercado, más de 1.500 millones de usuarios y es el líder indiscutido del mercado. 
 
-Fuente: https://chatbotsmagazine.com/a-step-by-step-guide-to-creating-whatsapp-chatbot-for-business-275dc3924b17
+**Fuente:** https://chatbotsmagazine.com/a-step-by-step-guide-to-creating-whatsapp-chatbot-for-business-275dc3924b17
 
 En la gran mayoría de las empresas existe una persona encarga de responder a los mensajes. Esto tiene varios inconvenientes, tanto desde el punto de vista de la empresa como del cliente. Para la empresa se gastan recursos al tener a una persona dedicada a esta labor y para el cliente, ya que no siempre recibe una atención inmediata pues el encargado puede estar ocupado o atendiendo a otras solicitudes. En contraste al reemplazarse esta persona por un sistema automatizado, se ahorran recursos y se mejora la atención al cliente.
 
 
 Solución tecnológica
----------------------
+--------------------
 
-Formulación
+**Formulación**
 
-Principalmente nuestro sistema organizará la agenda del mecánico, lo que le permitirá tener un flujo de trabajo más ordenado y hará más eficiente la comunicación con sus clientes. 
+La solución consiste en una aplicación que lleve un registro de fichas de todos los clientes del taller y sus vehículos. Esto permitirá al dueño tener siempre disponible información relevante sobre los clientes y sus vehículos. Además contará con una interfaz web que permitirá a los clientes del taller reservar citas para llevar su vehículo al taller. El dueño del taller podrá visualizar las citas que han sido tomadas, para poder organizar mejor su horario de trabajo. Una vez que el cliente deje su vehículo en el taller se le entregará un código que le permitirá hacer un seguimiento de los avances en la reparación de su vehículo y ver cuándo esté listo para ser retirado.
 
-Básicamente el funcionamiento del sistema es el siguiente: Un servidor Windows server 2012 R2 ejecutará el explorador web Google Chrome en el cual mediante Selenium y un script en Python controlará una instancia de WhatsApp web recibiendo y respondiendo los mensajes de los clientes cotejando con una base de datos 
-(mySql) en el mismo servidor, para asignarles sus citas y posteriormente notificarles cuando pueden retirar su vehículo. Paralelamente la aplicación móvil del mecánico se actualizará con la base de datos del servidor para informar al mecánico su agenda próxima. 
-
-El sistema estará disponible idealmente todos los días del año, siempre que todos los dispositivos involucrados cuenten con una conexión a internet. En cuanto a seguridad, la información que maneja el sistema no es sensible (no incluye contraseñas, tarjetas de crédito, mails, etc.) aún así se aprovecha la encriptación de extremo a extremo que provee WhatsApp para asegurar la información en tránsito contra ciber ataques, mientras que el servidor que almacena esta información cuenta con las actualizaciones más recientes del software que utiliza minimizando la posibilidad de que haya vulnerabilidades.
+Las fichas guardarán información útil para el cliente como por ejemplo cuándo vence la revisión técnica de un vehículo, para que el taller pueda notificar al cliente dueño de ese vehículo antes de que venza, lo que ayudará a la fidelización de los clientes para que vuelvan a traer sus vehículos al taller en el futuro.
