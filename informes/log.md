@@ -19,3 +19,5 @@ Grabación del Pitch
 ### Lunes 26 de agosto
 Replanteamiento de la solución al problema 
 
+### Martes 27 de agosto
+Actualización de la introducción, solución y objetivos 
