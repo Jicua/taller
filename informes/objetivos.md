@@ -6,7 +6,7 @@ Esta herramienta de reserva facilitará la organización de trabajo del mecánic
 
 Objetivos específicos
 ---------------------
-•	Otorgar un código al cliente con el cual le permita realizar un seguimiento de su vehículo desde el ingreso al taller hasta cuándo se va.
+•	Otorgar un código al cliente con el cual le permita realizar un seguimiento de su vehículo desde el ingreso al taller hasta que sea retirado.
 
 •	Tener un control de los vehículos que se encuentran actualmente en el taller mediante la creación de fichas que guarden datos beneficios para la toma de decisiones.
 
