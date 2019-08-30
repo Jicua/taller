@@ -22,7 +22,7 @@ En cuanto al cliente, éste muchas veces acude físicamente al taller y lo encue
 
 **Alcance**
 
-Nuestro objetivo en términos de alcance es automatizar la comunicación entre la empresa y sus clientes haciendo más eficiente la recepción y retiro de vehículos del taller. A su vez esto permitirá al mecánico llevar un registro de las citas lo cual le facilitará la organización de sus tiempos. 
+Nuestro objetivo en términos de alcance es automatizar la comunicación entre la empresa y sus clientes haciendo más eficiente la recepción y retiro de vehículos del taller. A su vez esto permitirá al mecánico llevar un registro de las citas lo cual le facilitará la organización de sus tiempos. Al informar al cliente del taller la fecha y hora de recepción del auto, presupuesto, de plazo de entrega, mantenciones que requiera, vencimiento de revisión técnica se logra una mayor satisfacción al cliente lo que favorece también al taller haciendo que los clientes se mantengan y recomienden este servicio.
 
 **Restricciones**
 
