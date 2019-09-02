@@ -22,8 +22,11 @@ Replanteamiento de la solución al problema
 ### Martes 27 de agosto
 Actualización de la introducción, solución y objetivos 
 
-## Jueves 29 de agosto
+### Jueves 29 de agosto
 Redacción del pitch
 
-## Viernes 30 de agosto
+### Viernes 30 de agosto
 Segunda reunión con el cliente
+
+### Lunes 2 de septiembre
+Desarrollo de la solución, cronograma
