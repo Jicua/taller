@@ -6,11 +6,11 @@ En Chile existen básicamente dos tipos de talleres automotrices: los concesiona
 
 Los talleres concesionados suelen ser parte de una automotora que importa y vende los vehículos al público general, ofreciéndoles una garantía siempre y cuando hagan las mantenciones del vehículo exclusivamente en su propio taller. Por esto la mayoría de los propietarios de autos nuevos acude a estos talleres. Sin embargo un gran número de usuarios prefiere llevar sus vehículos a talleres independientes, tanto por los precios más accesibles como por la calidad del trabajo realizado por los mecánicos más experimentados.
 
-## Sistemas de fichas
+## Sistema de fichas
 
 Muchos negocios utilizan un sistema de fichas para llevar un registro de sus clientes y operaciones. Algunos ejemplos de negocios que utilizan fichas son los bancos, isapres, clínicas dentales, consultorios médicos, gimnasios. Las fichas le permiten a estos negocios tener un registro ordenado de sus clientes y poder extraer fácilmente información sobre estos.
 
-## Sistemas de notificaciones
+## Sistema de notificaciones
 
 La manera en que se comunican las empresas con sus clientes evoluciona de la mano con los avances tecnológicos y en la actualidad se ve una clara tendencia al uso de las redes sociales. Las empresas hacen uso de los beneficios de las redes sociales, por ejemplo, promocionar sus productos, dar a conocer ofertas, etc. Pero no solo se limita al marketing y publicidad si no que también pueden ayudar en otros ámbitos del negocio como soporte en línea, atención de post ventas, transacciones, etc. 
 
