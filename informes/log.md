@@ -30,3 +30,6 @@ Segunda reunión con el cliente
 
 ### Lunes 2 de septiembre
 Desarrollo de la solución, cronograma
+
+## Martes 3 de septiembre
+Elaboración del primer informe
