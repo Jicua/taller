@@ -33,3 +33,6 @@ Desarrollo de la solución, cronograma
 
 ### Martes 3 de septiembre
 Elaboración del primer informe
+
+### Lunes 9 de septiembre
+Presentación priemr informe
