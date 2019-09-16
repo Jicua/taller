@@ -1,0 +1,251 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"get",
+				"get_object_or_404"
+			],
+			[
+				"Produc",
+				"ProductForm"
+			],
+			[
+				"produ",
+				"product_detail_view"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "from django.db import models\n\nclass Cliente(models.Model):\n\trut\t\t= models.CharField(max_length = 10),\n\tnombre\t\t= models.CharField(max_length = 100),\n\ttelefono\t= models.CharField(max_length = 12),\n\temail\t\t= models.CharField(max_length = 100, blank = True)\n\t\nclass Vehiculo(models.Model):\n\tid_cliente\t= models.ForeignKey(Cliente),\n\tpatente\t\t= models.CharField(max_length = 6),\n\tmarca\t\t= models.CharField(max_length = 40),\n\tmodelo\t\t= models.CharField(max_length = 40),\n\tkilometraje\t= models.PositiveIntegerField()\n\t\nclass Atencion(models.Model):\n\tid_vehiculo\t= models.ForeignKey(Vehiculo),\n\tfecha_entrada\t= models.DateTimeField(),\n\tfecha_salida\t= models.DateTimeField(blank = True)\n\t\nclass Detalle(models.Model):\n\tid_atencion\t= models.ForeignKey(Atencion),\n\tdescripcion\t= models.TextField(blank = True),\n\t\nclass Imagen(models.Model):\n\tid_detalle\t= models.ForeignKey(Detalle),\n\tubicacion\t= models.CharField(max_length = 255), # file path relativo\n\tdescripcion\t= models.TextField(blank = True)\n",
+			"settings":
+			{
+				"buffer_size": 989,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/Javier/GitHub/seminariodegrado",
+		"/C/Users/Javier/GitHub/seminariodegrado/src"
+	],
+	"file_history":
+	[
+		"/C/Users/Javier/GitHub/seminariodegrado/README.md",
+		"/C/Users/Javier/Dev/DjangoYT2/src/blog/forms.py",
+		"/C/Users/Javier/Dev/DjangoYT2/src/products/urls.py",
+		"/C/Users/Javier/Dev/DjangoYT2/src/blog/urls.py",
+		"/C/Users/Javier/Dev/DjangoYT2/src/blog/templates/articles/article_list.html",
+		"/C/Users/Javier/Dev/DjangoYT2/src/products/models.py",
+		"/C/Users/Javier/Dev/DjangoYT2/src/blog/templates/blog/article_list.html",
+		"/C/Users/Javier/Dev/DjangoYT2/src/blog/templates/blog/article_detail.html",
+		"/C/Users/Javier/Dev/DjangoYT2/src/blog/views.py",
+		"/C/Users/Javier/Dev/DjangoYT2/src/blog/models.py",
+		"/C/Users/Javier/Dev/DjangoYT2/src/DjangoYT2/urls.py",
+		"/C/Users/Javier/Dev/DjangoYT2/src/DjangoYT2/settings.py",
+		"/C/Users/Javier/Dev/DjangoYT2/src/products/admin.py",
+		"/C/Users/Javier/Dev/DjangoYT2/src/blog/admin.py",
+		"/C/Users/Javier/Dev/DjangoYT2/src/products/views.py",
+		"/C/Users/Javier/Dev/DjangoYT2/src/products/templates/products/product_detail.html",
+		"/C/Users/Javier/Dev/DjangoYT2/src/products/templates/products/product_list.html",
+		"/C/Users/Javier/Dev/DjangoYT2/src/products/templates/products/product_create.html",
+		"/C/Users/Javier/Dev/DjangoYT2/src/products/forms.py",
+		"/C/Users/Javier/Dev/DjangoYT2/src/products/templates/products/product_delete.html",
+		"/C/Users/Javier/Dev/DjangoYT2/src/templates/product/detail.html",
+		"/C/Users/Javier/Dev/DjangoYT2/src/templates/navbar.html",
+		"/C/Users/Javier/Dev/DjangoYT2/src/templates/base.html",
+		"/C/Users/Javier/Dev/DjangoYT2/src/templates/home.html",
+		"/C/Users/Javier/Dev/DjangoYT2/src/templates/contact.html",
+		"/C/Users/Javier/Dev/DjangoYT2/src/pages/views.py",
+		"/C/Users/Javier/Dev/DjangoYT2/src/templates/about.html",
+		"/C/Users/Javier/Dev/DjangoYT/src/products/models.py",
+		"/C/Users/Javier/Dev/DjangoYT/src/products/admin.py",
+		"/C/Users/Javier/Dev/DjangoYT/src/DjangoYT/settings.py",
+		"/C/Users/Javier/Desktop/lunabot.py",
+		"/C/Users/Javier/Desktop/New Text Document.txt",
+		"/C/Users/Javier/Desktop/lunabot.txt"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 101.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 989,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								989,
+								989
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 40.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "taller.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 236.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
