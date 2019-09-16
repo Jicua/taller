@@ -35,4 +35,7 @@ Desarrollo de la solución, cronograma
 Elaboración del primer informe
 
 ### Lunes 9 de septiembre
-Presentación priemr informe
+Presentación primer informe
+
+### Lunes 16 de septiembre
+Redefinición de objetivo general
