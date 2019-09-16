@@ -1,17 +1,9 @@
 ## Objetivo general
 
-Facilitar el trabajo del mecánico al darle acceso a la información que necesita de manera más rápida y desde cualquier lugar con una conexión a internet.
-Fidelizar a los clientes mejorando su experiencia con el taller mediante una aplicación web que les permita reservar una hora para llevar su vehículo al taller, además de informarle sobre el estado de la reparación y cuándo se encuentra listo para ser retirado.
-Esta herramienta de reserva facilitará la organización de trabajo del mecánico permitiéndole visualizar las citas con anticipación. Adicional a esto, se crearán fichas de clientes y vehículos que le otorgará información relevante para la operación diaria del taller y creará datos estadísticos a largo plazo para tener un mejor entendimiento del funcionamiento del negocio.
-Fidelizar a los clientes mediante la innovación en un sistema de notificación automatizado por WhatsApp que les avise de plazos a vencer.
-
+Reducir el tiempo que gasta el mecánico en labores administrativas que pueden ser automatizadas. Cada hora que dedica el mecánico a estas tareas es una hora menos que podría dedicar a trabajar en los vehículos que tiene en el taller, lo que a su vez significa que puede atender a menos vehículos a la semana por lo que pierde clientes y dinero.
 
 ## Objetivos específicos
 
-- Llevar un control de clientes y vehículos mediante la creación de fichas que guarden datos de interés para el negocio.
-
--	Mejorar la atención al cliente mediante la implementación de una interfaz web para reservar horas de atención.
-
-- Organizar los horarios de trabajo del taller asignando horas de recepción de clientes y notificando al mecánico de éstas.
-
--	Mejorar la experiencia del cliente con la integración de una aplicación para notificar al cliente de hitos importantes mediante WhatsApp.
+-	Reducir el tiempo gastado en buscar información almacenada físicamente sobre clientes, vehículos y atenciones a vehículos reemplazándolo con un sistema de fichas digitales con buscador y filtros.
+-	Reducir el tiempo gastado en coordinar visitas de clientes al taller por llamadas telefónicas reemplazándolas con una interfaz web de toma de horas.
+-	Implementar un sistema automático de comunicación con los clientes mediante WhatsApp para notificarles del vencimiento de plazos relevantes para sus vehículos.
