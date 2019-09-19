@@ -4,6 +4,8 @@
 
 <form method='POST'> {% csrf_token %}
 	{{ form.as_p }}
+
+	{{ form.media }}
 	<input type='submit' value='Guardar'/>
 </form>
 <p><a href='../'>Cancelar</a></p>

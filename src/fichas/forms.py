@@ -25,7 +25,7 @@ class VehiculoForm(forms.ModelForm):
 class AtencionForm(forms.ModelForm):
 	class Meta:
 		model = Atencion
-		form = [
+		fields = [
 			'id_vehiculo',
 			'fecha_entrada',
 			'fecha_salida'

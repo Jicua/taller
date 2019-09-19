@@ -32,6 +32,9 @@ class Atencion(models.Model):
 	id_vehiculo		= models.ForeignKey('Vehiculo', on_delete=models.CASCADE, verbose_name='Vehículo')
 	fecha_entrada	= models.DateTimeField()
 	fecha_salida	= models.DateTimeField(blank = True)
+
+	def get_absolute_url(self):
+		return reverse("fichas:atencion-detail", kwargs={"id": self.id})
 	
 class Detalle(models.Model):
 	id_atencion	= models.ForeignKey('Atencion', on_delete=models.CASCADE)

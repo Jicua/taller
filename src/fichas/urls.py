@@ -12,7 +12,13 @@ from .views import (
 	vehiculo_create_view,
 	vehiculo_detail_view,
 	vehiculo_update_view,
-	vehiculo_delete_view
+	vehiculo_delete_view,
+
+	atencion_list_view,
+	atencion_create_view,
+	atencion_detail_view,
+	atencion_update_view,
+	atencion_delete_view
 	)
 
 app_name = 'fichas'
@@ -30,4 +36,10 @@ urlpatterns = [
 	path('vehiculos/<int:id>/', vehiculo_detail_view, name='vehiculo-detail'),
 	path('vehiculos/<int:id>/editar/', vehiculo_update_view, name='vehiculo-update'),
 	path('vehiculos/<int:id>/eliminar/', vehiculo_delete_view, name='vehiculo-delete'),
+
+	path('atenciones/', atencion_list_view, name='atencion-list'),
+	path('atenciones/crear/', atencion_create_view, name='atencion-create'),
+	path('atenciones/<int:id>/', atencion_detail_view, name='atencion-detail'),
+	path('atenciones/<int:id>/editar/', atencion_update_view, name='atencion-update'),
+	path('atenciones/<int:id>/eliminar/', atencion_delete_view, name='vehiculo-delete'),
 ]

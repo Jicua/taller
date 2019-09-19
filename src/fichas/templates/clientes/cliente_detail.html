@@ -7,6 +7,15 @@
 <p> {{ object.telefono }} </p>
 <p> {{ object.email }} </p>
 
+<h1>Vehículos</h1>
+<ul>
+{% for instance in vehiculos_list %}
+	<li>
+		<a href='{{ instance.get_absolute_url }}'>{{ instance.marca }} {{ instance.modelo }}</a>
+	</li>
+{% endfor %}
+</ul>
+
 <p><a href= ./editar/>Editar cliente</a></p>
 <p><a href='./eliminar/'>Eliminar cliente</a></p>
 <p><a href='../'>Volver a la lista</a></p>

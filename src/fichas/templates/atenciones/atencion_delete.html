@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form action='.' method='POST'> {% csrf_token %}
+	<h1>Seguro que quiere eliminar la atención {{ object.id_vehiculo }} - {{ object.fecha_entrada }}?</h1>
+	<p><input type='submit' value='Sí' /></p>
+	<p><a href='../'>Cancelar</a></p>
+	
+</form>
+
+{% endblock %}

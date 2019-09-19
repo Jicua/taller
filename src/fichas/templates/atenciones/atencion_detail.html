@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1> {{ object.id_vehiculo }} </h1>
+<p> {{ object.fecha_entrada }} </p>
+<p> {{ object.fecha_salida }} </p>
+
+<p><a href= ./editar/>Editar atención</a></p>
+<p><a href='./eliminar/'>Eliminar atención</a></p>
+<p><a href='../'>Volver a la lista</a></p>
+{% endblock %}
