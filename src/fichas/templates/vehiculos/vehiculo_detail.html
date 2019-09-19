@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<p> Patente: {{ object.patente }} </p>
+<p> Marca: {{ object.marca }} </p>
+<p> Modelo: {{ object.modelo }} </p>
+<p> Kilometraje: {{ object.kilometraje }} </p>
+<p> Dueño: {{ object.id_cliente }}</p>
+
+<p><a href= ./editar/>Editar vehiculo</a></p>
+<p><a href='./eliminar/'>Eliminar vehiculo</a></p>
+<p><a href='../'>Volver a la lista</a></p>
+{% endblock %}

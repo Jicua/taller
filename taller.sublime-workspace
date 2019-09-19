@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"fichas",
+				"fichas_home_view"
+			],
+			[
 				"get",
 				"get_object_or_404"
 			],
@@ -20,10 +24,38 @@
 	"buffers":
 	[
 		{
-			"contents": "from django.db import models\n\nclass Cliente(models.Model):\n\trut\t\t= models.CharField(max_length = 10),\n\tnombre\t\t= models.CharField(max_length = 100),\n\ttelefono\t= models.CharField(max_length = 12),\n\temail\t\t= models.CharField(max_length = 100, blank = True)\n\t\nclass Vehiculo(models.Model):\n\tid_cliente\t= models.ForeignKey(Cliente),\n\tpatente\t\t= models.CharField(max_length = 6),\n\tmarca\t\t= models.CharField(max_length = 40),\n\tmodelo\t\t= models.CharField(max_length = 40),\n\tkilometraje\t= models.PositiveIntegerField()\n\t\nclass Atencion(models.Model):\n\tid_vehiculo\t= models.ForeignKey(Vehiculo),\n\tfecha_entrada\t= models.DateTimeField(),\n\tfecha_salida\t= models.DateTimeField(blank = True)\n\t\nclass Detalle(models.Model):\n\tid_atencion\t= models.ForeignKey(Atencion),\n\tdescripcion\t= models.TextField(blank = True),\n\t\nclass Imagen(models.Model):\n\tid_detalle\t= models.ForeignKey(Detalle),\n\tubicacion\t= models.CharField(max_length = 255), # file path relativo\n\tdescripcion\t= models.TextField(blank = True)\n",
+			"file": "src/fichas/urls.py",
 			"settings":
 			{
-				"buffer_size": 989,
+				"buffer_size": 1123,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/fichas/forms.py",
+			"settings":
+			{
+				"buffer_size": 507,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/fichas/models.py",
+			"settings":
+			{
+				"buffer_size": 1510,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/fichas/templates/atenciones/atencion_create.html",
+			"settings":
+			{
+				"buffer_size": 200,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		}
@@ -61,10 +93,39 @@
 	"expanded_folders":
 	[
 		"/C/Users/Javier/GitHub/seminariodegrado",
-		"/C/Users/Javier/GitHub/seminariodegrado/src"
+		"/C/Users/Javier/GitHub/seminariodegrado/src",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/atenciones",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/clientes"
 	],
 	"file_history":
 	[
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/vehiculos/vehiculo_delete.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/vehiculos/vehiculo_detail.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/vehiculos/vehiculo_list.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/vehiculos/vehiculo_create.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/models.py",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/views.py",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/clientes/cliente_detail.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/fichas.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/base.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/clientes/cliente_list.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/clientes/cliente_create.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/clientes/cliente_delete.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/forms.py",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/taller/settings.py",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/taller/urls.py",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/cliente_detail.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/taller/templates/clientes/cliente_detail.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/templates/cliente/detail.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/templates/navbar.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/templates/base.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/templates/home.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/pages/views.py",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/templates/contact.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/instrucciones.md",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/admin.py",
 		"/C/Users/Javier/GitHub/seminariodegrado/README.md",
 		"/C/Users/Javier/Dev/DjangoYT2/src/blog/forms.py",
 		"/C/Users/Javier/Dev/DjangoYT2/src/products/urls.py",
@@ -115,6 +176,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"/'></"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -132,29 +194,114 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
+					"file": "src/fichas/urls.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 989,
+						"buffer_size": 1123,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								989,
-								989
+								986,
+								986
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/fichas/forms.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 507,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								502,
+								502
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/fichas/models.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1510,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1050,
+								1050
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Python/Python.sublime-syntax",
 							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 108.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/fichas/templates/atenciones/atencion_create.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 200,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								200,
+								200
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,

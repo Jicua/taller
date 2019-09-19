@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{{ object.list }}
+
+{% for instance in object_list %}
+
+<p><a href='{{ instance.get_absolute_url }}'>{{ instance.nombre }}</a></p>
+
+{% endfor %}
+
+<p><a href='./crear/'>Agregar nuevo cliente</a></p>
+<p><a href='../'>Volver a fichas</a></p>
+{% endblock %}
