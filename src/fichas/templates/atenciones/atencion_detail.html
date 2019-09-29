@@ -1,12 +1,23 @@
-{% extends 'base.html' %}
+{% extends 'fichas/base.html' %}
 
 {% block content %}
 
-<h1> {{ object.id_vehiculo }} </h1>
-<p> {{ object.fecha_entrada }} </p>
-<p> {{ object.fecha_salida }} </p>
+<h2> Atención </h2>
+<p> Vehículo: {{ object.id_vehiculo }} de {{ object.id_vehiculo.id_cliente }} </p>
+<p> Fecha de entrada: {{ object.fecha_entrada }} </p>
+<p> Fecha de salida: {{ object.fecha_salida }} </p>
 
-<p><a href= ./editar/>Editar atención</a></p>
-<p><a href='./eliminar/'>Eliminar atención</a></p>
-<p><a href='../'>Volver a la lista</a></p>
+<p><input type="button" onclick="location.href='./editar/';" value="Editar" /> <input type="button" onclick="location.href='./eliminar/';" value="Eliminar" /> <input type="button" onclick="location.href='../../';" value="Volver al vehículo" /></p>
+
+<h2> Detalles </h2>
+{% if detalles_list %}
+	{% for instance in detalles_list %}
+		<li>
+			<p><a href='./detalles/{{ instance.id }}'>{{ instance.descripcion }}</a></p>
+		</li>
+	{% endfor %}
+{% else %}
+	<p>Esta atención no tiene detalles.</p>
+{% endif %}
+<p><input type="button" onclick="location.href='./detalles/crear/';" value="Agregar detalle" /></p>
 {% endblock %}

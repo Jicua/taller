@@ -35,12 +35,15 @@ class Atencion(models.Model):
 
 	def get_absolute_url(self):
 		return reverse("fichas:atencion-detail", kwargs={"id": self.id})
+
+	#def get_relative_url(self):
+	#	return reverse("fichas:vehiculo-atencion-detail", kwargs={"at": self.id})
 	
 class Detalle(models.Model):
-	id_atencion	= models.ForeignKey('Atencion', on_delete=models.CASCADE)
+	id_atencion	= models.ForeignKey('Atencion', on_delete=models.CASCADE, verbose_name='Atención')
 	descripcion	= models.TextField(blank = True)
 	
 class Imagen(models.Model):
-	id_detalle	= models.ForeignKey('Detalle', on_delete=models.CASCADE)
+	id_detalle	= models.ForeignKey('Detalle', on_delete=models.CASCADE, verbose_name='Detalle')
 	ubicacion	= models.CharField(max_length = 255) # file path relativo
 	descripcion	= models.TextField(blank = True)

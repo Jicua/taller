@@ -1,0 +1,30 @@
+{% load static %}
+<!doctype html>
+<html>
+<head>
+	<title>Taller Mecánico Lüer</title>
+	<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css"/>
+</head>
+<body>
+	<style>
+		.contenido {
+			--contentWidth: 960px;
+			max-width: var(--contentWidth);
+			margin: 0 auto;
+		}
+		.forma {
+			column-count: 1;
+			column-gap: 50px;
+			column-rule: 1px solid lightblue;
+		}
+	</style>
+	{% include 'fichas/navbar.html' %}
+	<br/>
+		<div class="contenido">
+			{% block content %}
+				se reemplaza
+			{% endblock %}
+		</div>
+	</div>
+</body>
+</html>

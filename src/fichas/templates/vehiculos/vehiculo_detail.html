@@ -1,14 +1,24 @@
-{% extends 'base.html' %}
+{% extends 'fichas/base.html' %}
 
 {% block content %}
-
+<h2> Vehículo </h2>
+<p> Dueño: <a href = '{{ object.id_cliente.get_absolute_url }}' > {{ object.id_cliente.nombre }} </a> </p>
 <p> Patente: {{ object.patente }} </p>
 <p> Marca: {{ object.marca }} </p>
 <p> Modelo: {{ object.modelo }} </p>
 <p> Kilometraje: {{ object.kilometraje }} </p>
-<p> Dueño: <a href=''>{{ object.id_cliente }}</a></p>
 
-<p><a href= ./editar/>Editar vehiculo</a></p>
-<p><a href='./eliminar/'>Eliminar vehiculo</a></p>
-<p><a href='../'>Volver a la lista</a></p>
+<p><input type="button" onclick="location.href='./editar/';" value="Editar" /> <input type="button" onclick="location.href='./eliminar/';" value="Eliminar" /> <input type="button" onclick="location.href='../';" value="Volver a la lista" /></p>
+
+<h2> Atenciones </h2>
+{% if atenciones_list %}
+	{% for instance in atenciones_list %}
+		<li>
+			<p><a href='./atenciones/{{ instance.id }}'>{{ instance.fecha_entrada }}</a></p>
+		</li>
+	{% endfor %}
+{% else %}
+	<p>Este vehículo no tiene atenciones.</p>
+{% endif %}
+<p><input type="button" onclick="location.href='./atenciones/crear/';" value="Agregar atención" /></p>
 {% endblock %}

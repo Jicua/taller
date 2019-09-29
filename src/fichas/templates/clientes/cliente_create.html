@@ -1,11 +1,15 @@
-{% extends 'base.html' %}
+{% extends 'fichas/base.html' %}
 
 {% block content %}
-
-<form method='POST'> {% csrf_token %}
-	{{ form.as_p }}
-	<input type='submit' value='Guardar'/>
+<section>
+<form method='POST' action='../'> {% csrf_token %}
+	<div class="forma">
+		<p>Rut: <input type='text' name='rut' placeholder='Ingrese rut' required=True></p>
+		<p>Nombre: <input type='text' name='nombre' placeholder='Ingrese nombre' required=True></p>
+		<p>Teléfono: <input type='text' name='telefono' value='+56' required=True></p>
+		<p>E-mail: <input type='text' name='email' placeholder='Ingrese e-mail' required=True></p>
+		<input type='submit' value='Guardar'/> <input type="button" onclick="location.href='../';" value="Cancelar" />
+	</div>
 </form>
-<p><a href='../'>Cancelar</a></p>
-
+</section>
 {% endblock %}

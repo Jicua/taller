@@ -1,15 +1,26 @@
-{% extends 'base.html' %}
+{% extends 'fichas/base.html' %}
 
 {% block content %}
 
-{{ object.list }}
-
-{% for instance in object_list %}
-
-<p><a href='{{ instance.get_absolute_url }}'>{{ instance.marca }} {{ instance.modelo }} de {{ instance.id_cliente }}</a></p>
-
-{% endfor %}
-
-<p><a href='./crear/'>Agregar nuevo vehículo</a></p>
-<p><a href='../'>Volver a fichas</a></p>
+<div class="container">
+	<table>
+		<thead>
+			<tr>
+				<th>Marca</th>
+				<th>Modelo</th>
+				<th>Dueño</th>
+			</tr>
+		</thead>
+		{% for instance in object_list %}
+		<tr>
+			<td><a href='{{ instance.get_absolute_url }}'>{{ instance.marca }}</a></td>
+			<td><a href='{{ instance.get_absolute_url }}'>{{ instance.modelo }}</a></td>
+			<td><a href='{{ instance.id_cliente.get_absolute_url }}'>{{ instance.id_cliente }}</a></td>
+		</tr>
+		{% endfor %}
+	</table>
+</div>
+<form action="./crear/">
+    <input type="submit" value="Nuevo vehículo" />
+</form>
 {% endblock %}

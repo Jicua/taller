@@ -1,22 +1,25 @@
-{% extends 'base.html' %}
+{% extends 'fichas/base.html' %}
 
 {% block content %}
 
-<h1> {{ object.nombre }} </h1>
-<p> {{ object.rut }} </p>
-<p> {{ object.telefono }} </p>
-<p> {{ object.email }} </p>
+<h2> {{ object.nombre }} </h2>
+<p> Rut: {{ object.rut }} </p>
+<p> Teléfono: {{ object.telefono }} </p>
+<p> Email: {{ object.email }} </p>
 
-<h1>Vehículos</h1>
-<ul>
-{% for instance in vehiculos_list %}
-	<li>
-		<a href='{{ instance.get_absolute_url }}'>{{ instance.marca }} {{ instance.modelo }}</a>
-	</li>
-{% endfor %}
-</ul>
+<p><input type="button" onclick="location.href='./editar/';" value="Editar" /> <input type="button" onclick="location.href='./eliminar/';" value="Eliminar" /> <input type="button" onclick="location.href='../';" value="Volver a la lista" /></p>
 
-<p><a href= ./editar/>Editar cliente</a></p>
-<p><a href='./eliminar/'>Eliminar cliente</a></p>
-<p><a href='../'>Volver a la lista</a></p>
+<h2>Vehículos</h2>
+{% if vehiculos_list %}
+	<ul>
+	{% for instance in vehiculos_list %}
+		<li>
+			<a href='{{ instance.get_absolute_url }}'>{{ instance.marca }} {{ instance.modelo }}</a>
+		</li>
+	{% endfor %}
+	</ul>
+{% else %}
+	<p>Este cliente no tiene vehículos.</p>
+{% endif %}
+<p><input type="button" onclick="location.href='../../vehiculos/crear?cliente={{ object.id }}';" value="Agregar Vehículo" /></p>
 {% endblock %}

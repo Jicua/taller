@@ -1,0 +1,13 @@
+{% extends 'fichas/base.html' %}
+
+{% block content %}
+
+<h1> Detalle </h1>
+<p> Vehículo: {{ object.id_atencion.id_vehiculo }} de {{ object.id_atencion.id_vehiculo.id_cliente }} </p>
+<p> Fecha de entrada: {{ object.fecha_entrada }} </p>
+<p> Fecha de salida: {{ object.fecha_salida }} </p>
+
+<p><a href= ./editar/>Editar atención</a> - <a href='./eliminar/'>Eliminar atención</a> - <a href='../../'>Volver a atención</a></p>
+
+<p><a href='./detalles/crear'>Agregar detalle</a></p>
+{% endblock %}

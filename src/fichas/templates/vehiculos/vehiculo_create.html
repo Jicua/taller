@@ -1,11 +1,10 @@
-{% extends 'base.html' %}
+{% extends 'fichas/base.html' %}
 
 {% block content %}
 
 <form method='POST'> {% csrf_token %}
 	{{ form.as_p }}
 	<input type='submit' value='Guardar'/>
+	<input type="button" onclick="location.href='../';" value="Cancelar" />
 </form>
-<p><a href='../'>Cancelar</a></p>
-
 {% endblock %}

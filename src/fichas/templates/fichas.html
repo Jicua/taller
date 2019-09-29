@@ -1,6 +1,36 @@
-{% extends 'base.html' %}
+{% extends 'fichas/base.html' %}
+{% load static %}
 
 {% block content %}
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 23.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+<div class="row">
+  <div class="column">
+    <img src="{% static 'images/img_snow.jpg' %}" alt="Snow" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="{% static 'images/img_forest.jpg' %}" alt="Forest" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="{% static 'images/img_mountains.jpg' %}" alt="Mountains" style="width:100%">
+  </div>
+</div>
 
 <p><a href='./clientes/'>Clientes</a></p>
 <p><a href='./vehiculos/'>Vehículos</a></p>

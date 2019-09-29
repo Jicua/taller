@@ -1,15 +1,27 @@
-{% extends 'base.html' %}
+{% extends 'fichas/base.html' %}
 
 {% block content %}
 
 {{ object.list }}
-
-{% for instance in object_list %}
-
-<p><a href='{{ instance.get_absolute_url }}'>{{ instance.nombre }}</a></p>
-
-{% endfor %}
-
-<p><a href='./crear/'>Agregar nuevo cliente</a></p>
-<p><a href='../'>Volver a fichas</a></p>
+<div class="lista">
+	<table>
+		<thead>
+			<tr>
+				<th>Nombre</th>
+				<th>Teléfono</th>
+				<th>Email</th>
+			</tr>
+		</thead>
+		{% for instance in object_list %}
+		<tr>
+			<td><a href='{{ instance.get_absolute_url }}'>{{ instance.nombre }}</a></td>
+			<td>{{ instance.telefono }}</td>
+			<td>{{ instance.email }}</td>
+		</tr>
+		{% endfor %}
+	</table>
+<form action="./crear/">
+    <input type="submit" value="Nuevo cliente" />
+</form>
+</div>
 {% endblock %}
