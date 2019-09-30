@@ -1,4 +1,5 @@
 from django.urls import path
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from .views import (
 	fichas_home_view,
 
@@ -62,4 +63,4 @@ urlpatterns = [
 	path('vehiculos/<int:id>/atenciones/<int:at>/detalles/<int:de>/', detalle_detail_view, name='detalle-detail'),
 	
 ]
-
+urlpatterns += staticfiles_urlpatterns()

@@ -28,65 +28,47 @@
 	"buffers":
 	[
 		{
-			"file": "src/fichas/forms.py",
-			"settings":
-			{
-				"buffer_size": 987,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "src/fichas/templates/fichas/base.html",
 			"settings":
 			{
-				"buffer_size": 548,
+				"buffer_size": 972,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/fichas/templates/clientes/cliente_create.html",
+			"file": "src/taller/urls.py",
 			"settings":
 			{
-				"buffer_size": 643,
+				"buffer_size": 1064,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/fichas/urls.py",
+			"settings":
+			{
+				"buffer_size": 2341,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/fichas/templates/clientes/cliente_list.html",
+			"contents": "<!DOCTYPE html>\n<!--\n\tTransit by TEMPLATED\n\ttemplated.co @templatedco\n\tReleased for free under the Creative Commons Attribution 3.0 license (templated.co/license)\n-->\n<html lang=\"en\">\n\t<head>\n\t\t<meta charset=\"UTF-8\">\n\t\t<title>Generic - Transit by TEMPLATED</title>\n\t\t<meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\" />\n\t\t<meta name=\"description\" content=\"\" />\n\t\t<meta name=\"keywords\" content=\"\" />\n\t\t<!--[if lte IE 8]><script src=\"js/html5shiv.js\"></script><![endif]-->\n\t\t<script src=\"js/jquery.min.js\"></script>\n\t\t<script src=\"js/skel.min.js\"></script>\n\t\t<script src=\"js/skel-layers.min.js\"></script>\n\t\t<script src=\"js/init.js\"></script>\n\t\t<noscript>\n\t\t\t<link rel=\"stylesheet\" href=\"css/skel.css\" />\n\t\t\t<link rel=\"stylesheet\" href=\"css/style.css\" />\n\t\t\t<link rel=\"stylesheet\" href=\"css/style-xlarge.css\" />\n\t\t</noscript>\n\t</head>\n\t<body>\n\n\t\t<!-- Header -->\n\t\t\t<header id=\"header\">\n\t\t\t\t<h1><a href=\"index.html\">Transit</a></h1>\n\t\t\t\t<nav id=\"nav\">\n\t\t\t\t\t<ul>\n\t\t\t\t\t\t<li><a href=\"index.html\">Home</a></li>\n\t\t\t\t\t\t<li><a href=\"generic.html\">Generic</a></li>\n\t\t\t\t\t\t<li><a href=\"elements.html\">Elements</a></li>\n\t\t\t\t\t\t<li><a href=\"#\" class=\"button special\">Sign Up</a></li>\n\t\t\t\t\t</ul>\n\t\t\t\t</nav>\n\t\t\t</header>\n\n\t\t<!-- Main -->\n\t\t\t<section id=\"main\" class=\"wrapper\">\n\t\t\t\t<div class=\"container\">\n\n\t\t\t\t\t<header class=\"major\">\n\t\t\t\t\t\t<h2>Generic</h2>\n\t\t\t\t\t\t<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>\n\t\t\t\t\t</header>\n\n\t\t\t\t\t<a href=\"#\" class=\"image fit\"><img src=\"images/pic07.jpg\" alt=\"\" /></a>\n\t\t\t\t\t<p>Vis accumsan feugiat adipiscing nisl amet adipiscing accumsan blandit accumsan sapien blandit ac amet faucibus aliquet placerat commodo. Interdum ante aliquet commodo accumsan vis phasellus adipiscing. Ornare a in lacinia. Vestibulum accumsan ac metus massa tempor. Accumsan in lacinia ornare massa amet. Ac interdum ac non praesent. Cubilia lacinia interdum massa faucibus blandit nullam. Accumsan phasellus nunc integer. Accumsan euismod nunc adipiscing lacinia erat ut sit. Arcu amet. Id massa aliquet arcu accumsan lorem amet accumsan.</p>\n\t\t\t\t\t<p>Amet nibh adipiscing adipiscing. Commodo ante vis placerat interdum massa massa primis. Tempus condimentum tempus non ac varius cubilia adipiscing placerat lorem turpis at. Aliquet lorem porttitor interdum. Amet lacus. Aliquam lobortis faucibus blandit ac phasellus. In amet magna non interdum volutpat porttitor metus a ante ac neque. Nisi turpis. Commodo col. Interdum adipiscing mollis ut aliquam id ante adipiscing commodo integer arcu amet Ac interdum ac non praesent. Cubilia lacinia interdum massa faucibus blandit nullam. Accumsan phasellus nunc integer. Accumsan euismod nunc adipiscing lacinia erat ut sit. Arcu amet. Id massa aliquet arcu accumsan lorem amet accumsan commodo odio cubilia ac eu interdum placerat placerat arcu commodo lobortis adipiscing semper ornare pellentesque.</p>\n\t\t\t\t\t<p>Amet nibh adipiscing adipiscing. Commodo ante vis placerat interdum massa massa primis. Tempus condimentum tempus non ac varius cubilia adipiscing placerat lorem turpis at. Aliquet lorem porttitor interdum. Amet lacus. Aliquam lobortis faucibus blandit ac phasellus. In amet magna non interdum volutpat porttitor metus a ante ac neque. Nisi turpis. Commodo col. Interdum adipiscing mollis ut aliquam id ante adipiscing commodo integer arcu amet blandit adipiscing arcu ante.</p>\n\n\t\t\t\t</div>\n\t\t\t</section>\n\n\t\t<!-- Footer -->\n\t\t\t<footer id=\"footer\">\n\t\t\t\t<div class=\"container\">\n\t\t\t\t\t<section class=\"links\">\n\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t<section class=\"3u 6u(medium) 12u$(small)\">\n\t\t\t\t\t\t\t\t<h3>Lorem ipsum dolor</h3>\n\t\t\t\t\t\t\t\t<ul class=\"unstyled\">\n\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Lorem ipsum dolor sit</a></li>\n\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Nesciunt itaque, alias possimus</a></li>\n\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Optio rerum beatae autem</a></li>\n\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Nostrum nemo dolorum facilis</a></li>\n\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Quo fugit dolor totam</a></li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</section>\n\t\t\t\t\t\t\t<section class=\"3u 6u$(medium) 12u$(small)\">\n\t\t\t\t\t\t\t\t<h3>Culpa quia, nesciunt</h3>\n\t\t\t\t\t\t\t\t<ul class=\"unstyled\">\n\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Lorem ipsum dolor sit</a></li>\n\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Reiciendis dicta laboriosam enim</a></li>\n\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Corporis, non aut rerum</a></li>\n\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Laboriosam nulla voluptas, harum</a></li>\n\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Facere eligendi, inventore dolor</a></li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</section>\n\t\t\t\t\t\t\t<section class=\"3u 6u(medium) 12u$(small)\">\n\t\t\t\t\t\t\t\t<h3>Neque, dolore, facere</h3>\n\t\t\t\t\t\t\t\t<ul class=\"unstyled\">\n\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Lorem ipsum dolor sit</a></li>\n\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Distinctio, inventore quidem nesciunt</a></li>\n\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Explicabo inventore itaque autem</a></li>\n\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Aperiam harum, sint quibusdam</a></li>\n\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Labore excepturi assumenda</a></li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</section>\n\t\t\t\t\t\t\t<section class=\"3u$ 6u$(medium) 12u$(small)\">\n\t\t\t\t\t\t\t\t<h3>Illum, tempori, saepe</h3>\n\t\t\t\t\t\t\t\t<ul class=\"unstyled\">\n\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Lorem ipsum dolor sit</a></li>\n\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Recusandae, culpa necessita nam</a></li>\n\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Cupiditate, debitis adipisci blandi</a></li>\n\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Tempore nam, enim quia</a></li>\n\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Explicabo molestiae dolor labore</a></li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</section>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</section>\n\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t<div class=\"8u 12u$(medium)\">\n\t\t\t\t\t\t\t<ul class=\"copyright\">\n\t\t\t\t\t\t\t\t<li>&copy; Untitled. All rights reserved.</li>\n\t\t\t\t\t\t\t\t<li>Design: <a href=\"http://templated.co\">TEMPLATED</a></li>\n\t\t\t\t\t\t\t\t<li>Images: <a href=\"http://unsplash.com\">Unsplash</a></li>\n\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"4u$ 12u$(medium)\">\n\t\t\t\t\t\t\t<ul class=\"icons\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t<a class=\"icon rounded fa-facebook\"><span class=\"label\">Facebook</span></a>\n\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t<a class=\"icon rounded fa-twitter\"><span class=\"label\">Twitter</span></a>\n\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t<a class=\"icon rounded fa-google-plus\"><span class=\"label\">Google+</span></a>\n\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t<a class=\"icon rounded fa-linkedin\"><span class=\"label\">LinkedIn</span></a>\n\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</footer>\n\n\t</body>\n</html>",
+			"file": "src/fichas/static/generic.html",
+			"file_size": 6297,
+			"file_write_time": 130676154980000000,
 			"settings":
 			{
-				"buffer_size": 530,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
+				"buffer_size": 6297,
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "src/fichas/templates/fichas/navbar.html",
+			"file": "src/fichas/static/fichas/elements.html",
 			"settings":
 			{
-				"buffer_size": 313,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/fichas/views.py",
-			"settings":
-			{
-				"buffer_size": 4969,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/fichas/static/css/style.css",
-			"settings":
-			{
-				"buffer_size": 22545,
-				"encoding": "UTF-8",
+				"buffer_size": 19220,
 				"line_ending": "Unix"
 			}
 		}
@@ -127,39 +109,33 @@
 		"/C/Users/Javier/GitHub/seminariodegrado/src",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/static",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/static/css",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/atenciones",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/clientes",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/detalles",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/fichas",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/vehiculos",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/taller",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/taller/__pycache__",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/templates"
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/static/fichas",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/static/fichas/css"
 	],
 	"file_history":
 	[
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/forms.py",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/taller/settings.py",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/clientes/cliente_create.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/clientes/cliente_list.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/views.py",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/static/css/style.css",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/static/fichas/css/style.css",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/fichas/navbar.html",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/vehiculos/vehiculo_create.html",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/vehiculos/vehiculo_list.html",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/atenciones/atencion_detail.html",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/vehiculos/vehiculo_detail.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/clientes/cliente_list.html",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/clientes/cliente_detail.html",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/detalles/detalle_create.html",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/atenciones/atencion_create.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/clientes/cliente_create.html",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/clientes/cliente_delete.html",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/atenciones/atencion_list.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/views.py",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/models.py",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/urls.py",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/fichas/navbar.html",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/navbar.html",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/taller/urls.py",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/taller/settings.py",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/templates/base.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/static/css/style.css",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/fichas.html",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/detalles/detalle_detail.html",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/templates/navbar.html",
@@ -170,7 +146,6 @@
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/static/style.css",
 		"/C/Users/Javier/Dev/DjangoYT2/src/products/templates/products/product_delete.html",
 		"/C/Users/Javier/Dev/DjangoYT2/src/products/templates/products/product_create.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/forms.py",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/cliente_detail.html",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/taller/templates/clientes/cliente_detail.html",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/templates/cliente/detail.html",
@@ -213,11 +188,11 @@
 	],
 	"find":
 	{
-		"height": 40.0
+		"height": 27.0
 	},
 	"find_in_files":
 	{
-		"height": 101.0,
+		"height": 104.0,
 		"where_history":
 		[
 		]
@@ -264,53 +239,24 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/fichas/forms.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 987,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								429,
-								429
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "src/fichas/templates/fichas/base.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 548,
+						"buffer_size": 972,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								281,
-								281
+								753,
+								753
 							]
 						],
 						"settings":
@@ -326,28 +272,59 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "src/fichas/templates/clientes/cliente_create.html",
+					"buffer": 1,
+					"file": "src/taller/urls.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 643,
+						"buffer_size": 1064,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								201,
-								201
+								423,
+								423
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/fichas/urls.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2341,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								96,
+								96
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 594.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
@@ -355,19 +332,19 @@
 				},
 				{
 					"buffer": 3,
-					"file": "src/fichas/templates/clientes/cliente_list.html",
+					"file": "src/fichas/static/generic.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 530,
+						"buffer_size": 6297,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								72,
-								72
+								191,
+								191
 							]
 						],
 						"settings":
@@ -379,93 +356,36 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "src/fichas/templates/fichas/navbar.html",
+					"file": "src/fichas/static/fichas/elements.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 313,
+						"buffer_size": 19220,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								572,
+								572
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 378.4,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "src/fichas/views.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4969,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								585,
-								585
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 54.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "src/fichas/static/css/style.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 22545,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4059,
-								4059
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 4216.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
 					"type": "text"
 				}
 			]
