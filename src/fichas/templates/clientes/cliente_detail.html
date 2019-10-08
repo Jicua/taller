@@ -1,25 +1,30 @@
 {% extends 'fichas/base.html' %}
 
 {% block content %}
+<div class="row">
+	<div class="column">
+		<h2> {{ object.nombre }} </h2>
+		<p> <b>Rut:</b> {{ object.rut }} </p>
+		<p> <b>Teléfono:</b> {{ object.telefono }} </p>
+		<p> <b>Email:</b> {{ object.email }} </p>
 
-<h2> {{ object.nombre }} </h2>
-<p> Rut: {{ object.rut }} </p>
-<p> Teléfono: {{ object.telefono }} </p>
-<p> Email: {{ object.email }} </p>
-
-<p><input type="button" onclick="location.href='./editar/';" value="Editar" /> <input type="button" onclick="location.href='./eliminar/';" value="Eliminar" /> <input type="button" onclick="location.href='../';" value="Volver a la lista" /></p>
-
-<h2>Vehículos</h2>
-{% if vehiculos_list %}
-	<ul>
-	{% for instance in vehiculos_list %}
-		<li>
-			<a href='{{ instance.get_absolute_url }}'>{{ instance.marca }} {{ instance.modelo }}</a>
-		</li>
-	{% endfor %}
-	</ul>
-{% else %}
-	<p>Este cliente no tiene vehículos.</p>
-{% endif %}
-<p><input type="button" onclick="location.href='../../vehiculos/crear?cliente={{ object.id }}';" value="Agregar Vehículo" /></p>
+		<p><input type="button" onclick="location.href='./editar/';" value="Editar" /> <input type="button" class="red" onclick="location.href='./eliminar/';" value="Eliminar" /></p>
+		<p><input type="button" onclick="location.href='../';" value="Volver a la lista" /></p>
+	</div>
+	<div class="column">
+		<h2>Vehículos</h2>
+		{% if vehiculos_list %}
+			<ul>
+			{% for instance in vehiculos_list %}
+				<li>
+					<a href='{{ instance.get_absolute_url }}'>{{ instance.marca }} {{ instance.modelo }}</a>
+				</li>
+			{% endfor %}
+			</ul>
+		{% else %}
+			<p>Este cliente no tiene vehículos.</p>
+		{% endif %}
+		<p><input type="button" onclick="location.href='../../vehiculos/crear?cliente={{ object.id }}';" value="Agregar Vehículo" /></p>
+	</div>
+</div>
 {% endblock %}

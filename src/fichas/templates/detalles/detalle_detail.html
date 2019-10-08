@@ -2,12 +2,8 @@
 
 {% block content %}
 
-<h1> Detalle </h1>
-<p> Vehículo: {{ object.id_atencion.id_vehiculo }} de {{ object.id_atencion.id_vehiculo.id_cliente }} </p>
-<p> Fecha de entrada: {{ object.fecha_entrada }} </p>
-<p> Fecha de salida: {{ object.fecha_salida }} </p>
+<h2> Detalle de atención</h2>
+<p> {{ object.descripcion }} </p>
 
-<p><a href= ./editar/>Editar atención</a> - <a href='./eliminar/'>Eliminar atención</a> - <a href='../../'>Volver a atención</a></p>
-
-<p><a href='./detalles/crear'>Agregar detalle</a></p>
+<p><input type="button" onclick="location.href='./editar/';" value="Editar" /> <input type="button" class="red" onclick="location.href='./eliminar/';" value="Eliminar" /> <input type="button" onclick="location.href='../../';" value="Volver a atención" /></p>
 {% endblock %}

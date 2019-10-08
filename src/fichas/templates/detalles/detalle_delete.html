@@ -3,7 +3,7 @@
 {% block content %}
 
 <form action='.' method='POST'> {% csrf_token %}
-	<h2>¿Seguro que quiere eliminar el vehículo {{ object.marca }} {{ object.modelo }} de {{ object.id_cliente }}?</h2>
+	<h2>Seguro que quiere eliminar el detalle {{ object.descripcion }}?</h2>
 	<p><input type='submit' class="red" value='Sí' /> <input type="button" onclick="location.href='../';" value="Cancelar" /></p>
 	
 </form>

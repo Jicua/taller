@@ -2,9 +2,6 @@
 @import url(font-awesome.min.css);
 @import url(http://fonts.googleapis.com/css?family=Raleway:700,400);
 
-
-
-
 /*
 	Transit by TEMPLATED
 	templated.co @templatedco
@@ -12,11 +9,6 @@
 */
 
 /* Basic */
-
-	#page-wrap {
-     width: 800px;
-     margin: 0 auto;
-}
 
 	body {
 		background: #fff;
@@ -167,29 +159,10 @@
 		text-align: right;
 	}
 
-	/* propio */
-	.lista {
-		max-width: 960px;
-		margin: auto;
-	}
-
-	.column {
-		float: left;
-  		width: 33.33%;
-  		padding: 5px;
-	}
-
-	.row::after {
-	 	content: "";
-	 	clear: both;
-	 	display: table;
-	}
-
 /* Section/Article */
 
 	section.special, article.special {
 		text-align: center;
-
 	}
 
 	header p {
@@ -925,6 +898,18 @@
 			color: #ffffff !important;
 		}
 
+		/* propio */
+
+		input[type="submit"].red,
+		input[type="reset"].red,
+		input[type="button"].red,
+		.button.red {
+			background-color: #d62000;
+			color: #ffffff !important;
+		}
+
+		/* fin propio */
+
 			input[type="submit"].special:hover,
 			input[type="reset"].special:hover,
 			input[type="button"].special:hover,
@@ -951,30 +936,6 @@
 			color: #fff !important;
 			cursor: default;
 			opacity: 0.25;
-		}
-		.btn-group button {
-		  background-color: #4CAF50; /* Green background */
-		  border: 1px solid green; /* Green border */
-		  color: white; /* White text */
-		  padding: 10px 24px; /* Some padding */
-		  cursor: pointer; /* Pointer/hand icon */
-		  float: left; /* Float the buttons side by side */
-		}
-
-		.btn-group button:not(:last-child) {
-		  border-right: none; /* Prevent double borders */
-		}
-
-		/* Clear floats (clearfix hack) */
-		.btn-group:after {
-		  content: "";
-		  clear: both;
-		  display: table;
-		}
-
-		/* Add a background color on hover */
-		.btn-group button:hover {
-		  background-color: #3e8e41;
 		}
 
 /* Header */

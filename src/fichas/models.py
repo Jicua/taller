@@ -16,11 +16,13 @@ class Cliente(models.Model):
 		return self.nombre
 
 class Vehiculo(models.Model):
-	id_cliente	= models.ForeignKey('Cliente', null = True, on_delete = models.SET_NULL, verbose_name='Dueño')
+	id_cliente	= models.ForeignKey('Cliente', blank = True, null = True, on_delete = models.SET_NULL, verbose_name='Dueño')
 	patente		= models.CharField(max_length = 6)
+	vin 		= models.CharField(max_length = 20, blank = True, null = True)
 	marca		= models.CharField(max_length = 40)
 	modelo		= models.CharField(max_length = 40)
 	kilometraje	= models.PositiveIntegerField()
+	anyo		= models.PositiveIntegerField(null = True)
 
 	def get_absolute_url(self):
 		return reverse("fichas:vehiculo-detail", kwargs={"id": self.id})
@@ -31,19 +33,20 @@ class Vehiculo(models.Model):
 class Atencion(models.Model):
 	id_vehiculo		= models.ForeignKey('Vehiculo', on_delete=models.CASCADE, verbose_name='Vehículo')
 	fecha_entrada	= models.DateTimeField()
-	fecha_salida	= models.DateTimeField(blank = True)
+	fecha_salida	= models.DateTimeField(blank=True)
+	observaciones	= models.CharField(blank=True, max_length=500)
 
 	def get_absolute_url(self):
-		return reverse("fichas:atencion-detail", kwargs={"id": self.id})
+		return reverse("fichas:atencion-detail", kwargs={"id": self.id_vehiculo, "at": self.id})
 
 	#def get_relative_url(self):
 	#	return reverse("fichas:vehiculo-atencion-detail", kwargs={"at": self.id})
 	
 class Detalle(models.Model):
 	id_atencion	= models.ForeignKey('Atencion', on_delete=models.CASCADE, verbose_name='Atención')
-	descripcion	= models.TextField(blank = True)
+	descripcion	= models.TextField(blank=True)
 	
 class Imagen(models.Model):
 	id_detalle	= models.ForeignKey('Detalle', on_delete=models.CASCADE, verbose_name='Detalle')
-	ubicacion	= models.CharField(max_length = 255) # file path relativo
-	descripcion	= models.TextField(blank = True)
+	ubicacion	= models.CharField(max_length=255) # file path relativo
+	descripcion	= models.TextField(blank=True)

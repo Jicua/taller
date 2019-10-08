@@ -1,14 +1,24 @@
 {% extends 'fichas/base.html' %}
 
 {% block content %}
-
-{{ object.list }}
-
-{% for instance in object_list %}
-
-<p><a href='{{ instance.get_absolute_url }}'>{{ instance.id_vehiculo }} - {{ instance.fecha_entrada }}</a></p>
-
-{% endfor %}
+<table>
+	<thead>
+		<tr>
+			<th>Vehículo</th>
+			<th>Dueño</th>
+			<th>Fecha de entrada</th>
+			<th>Fecha de salida</th>
+		</tr>
+	</thead>
+	{% for instance in object_list %}
+	<tr>
+		<td><a href='/fichas/vehiculos/{{ instance.id_vehiculo }}/atenciones/{{ instance.id }}'>{{ instance.id_vehiculo }}</a></td>
+		<td>{{ instance.id_vehiculo.id_cliente }}</td>
+		<td>{{ instance.fecha_entrada }}</td>
+		<td>{{ instance.fecha_salida }}</td>
+	</tr>
+	{% endfor %}
+</table>
 
 <p><a href='./crear/'>Agregar nueva atención</a></p>
 <p><a href='../'>Volver a fichas</a></p>

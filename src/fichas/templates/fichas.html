@@ -9,7 +9,7 @@
 
 .column {
   float: left;
-  width: 23.33%;
+  width: 33.33%;
   padding: 5px;
 }
 
@@ -22,18 +22,21 @@
 </style>
 <div class="row">
   <div class="column">
-    <img src="{% static 'images/img_snow.jpg' %}" alt="Snow" style="width:100%">
+    <a href='./clientes/'><img src="{% static 'fichas/images/bokeh_car_lights_bg.jpg' %}" alt="Snow" style="width:100%">
+    <h2><center>Clientes</a></center></h2>
   </div>
   <div class="column">
-    <img src="{% static 'images/img_forest.jpg' %}" alt="Forest" style="width:100%">
+    <a href='./vehiculos/'><img src="{% static 'fichas/images/bokeh_car_lights_bg.jpg' %}" alt="Forest" style="width:100%">
+    <h2><center>Vehículos</a></center></h2>
   </div>
   <div class="column">
-    <img src="{% static 'images/img_mountains.jpg' %}" alt="Mountains" style="width:100%">
+    <a href='./atenciones/'><img src="{% static 'fichas/images/bokeh_car_lights_bg.jpg' %}" alt="Mountains" style="width:100%">
+    <h2><center>Atenciones</a></center></h2>
   </div>
 </div>
 
-<p><a href='./clientes/'>Clientes</a></p>
-<p><a href='./vehiculos/'>Vehículos</a></p>
-<p><a href='./atenciones/'>Atenciones</a></p>
+
+
+
 
 {% endblock %}

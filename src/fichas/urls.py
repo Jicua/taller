@@ -22,7 +22,8 @@ from .views import (
 	atencion_delete_view,
 
 	detalle_create_view,
-	detalle_detail_view
+	detalle_detail_view,
+	detalle_delete_view
 	)
 
 app_name = 'fichas'
@@ -61,6 +62,6 @@ urlpatterns = [
 
 	path('vehiculos/<int:id>/atenciones/<int:at>/detalles/crear/', detalle_create_view, name='detalle-create'),
 	path('vehiculos/<int:id>/atenciones/<int:at>/detalles/<int:de>/', detalle_detail_view, name='detalle-detail'),
+	path('vehiculos/<int:id>/atenciones/<int:at>/detalles/<int:de>/eliminar/', detalle_delete_view, name='detalle-delete'),
 	
 ]
-urlpatterns += staticfiles_urlpatterns()

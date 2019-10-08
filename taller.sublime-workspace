@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"backg",
+				"background-color\tproperty"
+			],
+			[
 				"aten",
 				"atencion_create_view"
 			],
@@ -28,19 +32,47 @@
 	"buffers":
 	[
 		{
-			"file": "src/fichas/templates/fichas/base.html",
+			"file": "src/fichas/models.py",
 			"settings":
 			{
-				"buffer_size": 972,
+				"buffer_size": 1976,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/taller/urls.py",
+			"file": "src/fichas/templates/clientes/cliente_create.html",
 			"settings":
 			{
-				"buffer_size": 1064,
+				"buffer_size": 630,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/fichas/templates/vehiculos/vehiculo_list.html",
+			"settings":
+			{
+				"buffer_size": 619,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/fichas/views.py",
+			"settings":
+			{
+				"buffer_size": 5284,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/fichas/templates/vehiculos/vehiculo_create.html",
+			"settings":
+			{
+				"buffer_size": 1154,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -48,28 +80,18 @@
 			"file": "src/fichas/urls.py",
 			"settings":
 			{
-				"buffer_size": 2341,
+				"buffer_size": 2444,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "<!DOCTYPE html>\n<!--\n\tTransit by TEMPLATED\n\ttemplated.co @templatedco\n\tReleased for free under the Creative Commons Attribution 3.0 license (templated.co/license)\n-->\n<html lang=\"en\">\n\t<head>\n\t\t<meta charset=\"UTF-8\">\n\t\t<title>Generic - Transit by TEMPLATED</title>\n\t\t<meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\" />\n\t\t<meta name=\"description\" content=\"\" />\n\t\t<meta name=\"keywords\" content=\"\" />\n\t\t<!--[if lte IE 8]><script src=\"js/html5shiv.js\"></script><![endif]-->\n\t\t<script src=\"js/jquery.min.js\"></script>\n\t\t<script src=\"js/skel.min.js\"></script>\n\t\t<script src=\"js/skel-layers.min.js\"></script>\n\t\t<script src=\"js/init.js\"></script>\n\t\t<noscript>\n\t\t\t<link rel=\"stylesheet\" href=\"css/skel.css\" />\n\t\t\t<link rel=\"stylesheet\" href=\"css/style.css\" />\n\t\t\t<link rel=\"stylesheet\" href=\"css/style-xlarge.css\" />\n\t\t</noscript>\n\t</head>\n\t<body>\n\n\t\t<!-- Header -->\n\t\t\t<header id=\"header\">\n\t\t\t\t<h1><a href=\"index.html\">Transit</a></h1>\n\t\t\t\t<nav id=\"nav\">\n\t\t\t\t\t<ul>\n\t\t\t\t\t\t<li><a href=\"index.html\">Home</a></li>\n\t\t\t\t\t\t<li><a href=\"generic.html\">Generic</a></li>\n\t\t\t\t\t\t<li><a href=\"elements.html\">Elements</a></li>\n\t\t\t\t\t\t<li><a href=\"#\" class=\"button special\">Sign Up</a></li>\n\t\t\t\t\t</ul>\n\t\t\t\t</nav>\n\t\t\t</header>\n\n\t\t<!-- Main -->\n\t\t\t<section id=\"main\" class=\"wrapper\">\n\t\t\t\t<div class=\"container\">\n\n\t\t\t\t\t<header class=\"major\">\n\t\t\t\t\t\t<h2>Generic</h2>\n\t\t\t\t\t\t<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>\n\t\t\t\t\t</header>\n\n\t\t\t\t\t<a href=\"#\" class=\"image fit\"><img src=\"images/pic07.jpg\" alt=\"\" /></a>\n\t\t\t\t\t<p>Vis accumsan feugiat adipiscing nisl amet adipiscing accumsan blandit accumsan sapien blandit ac amet faucibus aliquet placerat commodo. Interdum ante aliquet commodo accumsan vis phasellus adipiscing. Ornare a in lacinia. Vestibulum accumsan ac metus massa tempor. Accumsan in lacinia ornare massa amet. Ac interdum ac non praesent. Cubilia lacinia interdum massa faucibus blandit nullam. Accumsan phasellus nunc integer. Accumsan euismod nunc adipiscing lacinia erat ut sit. Arcu amet. Id massa aliquet arcu accumsan lorem amet accumsan.</p>\n\t\t\t\t\t<p>Amet nibh adipiscing adipiscing. Commodo ante vis placerat interdum massa massa primis. Tempus condimentum tempus non ac varius cubilia adipiscing placerat lorem turpis at. Aliquet lorem porttitor interdum. Amet lacus. Aliquam lobortis faucibus blandit ac phasellus. In amet magna non interdum volutpat porttitor metus a ante ac neque. Nisi turpis. Commodo col. Interdum adipiscing mollis ut aliquam id ante adipiscing commodo integer arcu amet Ac interdum ac non praesent. Cubilia lacinia interdum massa faucibus blandit nullam. Accumsan phasellus nunc integer. Accumsan euismod nunc adipiscing lacinia erat ut sit. Arcu amet. Id massa aliquet arcu accumsan lorem amet accumsan commodo odio cubilia ac eu interdum placerat placerat arcu commodo lobortis adipiscing semper ornare pellentesque.</p>\n\t\t\t\t\t<p>Amet nibh adipiscing adipiscing. Commodo ante vis placerat interdum massa massa primis. Tempus condimentum tempus non ac varius cubilia adipiscing placerat lorem turpis at. Aliquet lorem porttitor interdum. Amet lacus. Aliquam lobortis faucibus blandit ac phasellus. In amet magna non interdum volutpat porttitor metus a ante ac neque. Nisi turpis. Commodo col. Interdum adipiscing mollis ut aliquam id ante adipiscing commodo integer arcu amet blandit adipiscing arcu ante.</p>\n\n\t\t\t\t</div>\n\t\t\t</section>\n\n\t\t<!-- Footer -->\n\t\t\t<footer id=\"footer\">\n\t\t\t\t<div class=\"container\">\n\t\t\t\t\t<section class=\"links\">\n\t\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t\t<section class=\"3u 6u(medium) 12u$(small)\">\n\t\t\t\t\t\t\t\t<h3>Lorem ipsum dolor</h3>\n\t\t\t\t\t\t\t\t<ul class=\"unstyled\">\n\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Lorem ipsum dolor sit</a></li>\n\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Nesciunt itaque, alias possimus</a></li>\n\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Optio rerum beatae autem</a></li>\n\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Nostrum nemo dolorum facilis</a></li>\n\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Quo fugit dolor totam</a></li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</section>\n\t\t\t\t\t\t\t<section class=\"3u 6u$(medium) 12u$(small)\">\n\t\t\t\t\t\t\t\t<h3>Culpa quia, nesciunt</h3>\n\t\t\t\t\t\t\t\t<ul class=\"unstyled\">\n\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Lorem ipsum dolor sit</a></li>\n\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Reiciendis dicta laboriosam enim</a></li>\n\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Corporis, non aut rerum</a></li>\n\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Laboriosam nulla voluptas, harum</a></li>\n\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Facere eligendi, inventore dolor</a></li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</section>\n\t\t\t\t\t\t\t<section class=\"3u 6u(medium) 12u$(small)\">\n\t\t\t\t\t\t\t\t<h3>Neque, dolore, facere</h3>\n\t\t\t\t\t\t\t\t<ul class=\"unstyled\">\n\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Lorem ipsum dolor sit</a></li>\n\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Distinctio, inventore quidem nesciunt</a></li>\n\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Explicabo inventore itaque autem</a></li>\n\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Aperiam harum, sint quibusdam</a></li>\n\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Labore excepturi assumenda</a></li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</section>\n\t\t\t\t\t\t\t<section class=\"3u$ 6u$(medium) 12u$(small)\">\n\t\t\t\t\t\t\t\t<h3>Illum, tempori, saepe</h3>\n\t\t\t\t\t\t\t\t<ul class=\"unstyled\">\n\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Lorem ipsum dolor sit</a></li>\n\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Recusandae, culpa necessita nam</a></li>\n\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Cupiditate, debitis adipisci blandi</a></li>\n\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Tempore nam, enim quia</a></li>\n\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Explicabo molestiae dolor labore</a></li>\n\t\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t\t</section>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</section>\n\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t<div class=\"8u 12u$(medium)\">\n\t\t\t\t\t\t\t<ul class=\"copyright\">\n\t\t\t\t\t\t\t\t<li>&copy; Untitled. All rights reserved.</li>\n\t\t\t\t\t\t\t\t<li>Design: <a href=\"http://templated.co\">TEMPLATED</a></li>\n\t\t\t\t\t\t\t\t<li>Images: <a href=\"http://unsplash.com\">Unsplash</a></li>\n\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"4u$ 12u$(medium)\">\n\t\t\t\t\t\t\t<ul class=\"icons\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t<a class=\"icon rounded fa-facebook\"><span class=\"label\">Facebook</span></a>\n\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t<a class=\"icon rounded fa-twitter\"><span class=\"label\">Twitter</span></a>\n\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t<a class=\"icon rounded fa-google-plus\"><span class=\"label\">Google+</span></a>\n\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t<a class=\"icon rounded fa-linkedin\"><span class=\"label\">LinkedIn</span></a>\n\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</footer>\n\n\t</body>\n</html>",
-			"file": "src/fichas/static/generic.html",
-			"file_size": 6297,
-			"file_write_time": 130676154980000000,
+			"file": "src/fichas/forms.py",
 			"settings":
 			{
-				"buffer_size": 6297,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/fichas/static/fichas/elements.html",
-			"settings":
-			{
-				"buffer_size": 19220,
-				"line_ending": "Unix"
+				"buffer_size": 1453,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -108,41 +130,50 @@
 		"/C/Users/Javier/GitHub/seminariodegrado",
 		"/C/Users/Javier/GitHub/seminariodegrado/src",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/static",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/static/fichas",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/static/fichas/css"
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/clientes",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/fichas",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/vehiculos",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/taller"
 	],
 	"file_history":
 	[
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/forms.py",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/taller/settings.py",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/clientes/cliente_create.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/clientes/cliente_list.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/views.py",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/static/css/style.css",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/fichas.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/atenciones/atencion_list.html",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/static/fichas/css/style.css",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/fichas/navbar.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/vehiculos/vehiculo_create.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/vehiculos/vehiculo_list.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/atenciones/atencion_detail.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/fichas/base.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/clientes/cliente_list.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/urls.py",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/models.py",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/vehiculos/vehiculo_detail.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/atenciones/atencion_detail.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/views.py",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/atenciones/atencion_list_todas.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/clientes/cliente_delete.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/detalles/detalle_delete.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/detalles/detalle_detail.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/vehiculos/vehiculo_delete.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/clientes/cliente_create.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/vehiculos/vehiculo_create.html",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/clientes/cliente_detail.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/atenciones/atencion_delete.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/forms.py",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/static/generic.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/static/js/init.js",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/static/css/style.css",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/taller/urls.py",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/static/css/style.css",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/static/style.css",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/static/fichas/elements.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/fichas/navbar.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/vehiculos/vehiculo_list.html",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/detalles/detalle_create.html",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/atenciones/atencion_create.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/clientes/cliente_delete.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/atenciones/atencion_list.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/models.py",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/urls.py",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/navbar.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/taller/urls.py",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/templates/base.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/fichas.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/detalles/detalle_detail.html",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/templates/navbar.html",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/base.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/fichas/base.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/atenciones/atencion_delete.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/vehiculos/vehiculo_delete.html",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/static/style.css",
 		"/C/Users/Javier/Dev/DjangoYT2/src/products/templates/products/product_delete.html",
 		"/C/Users/Javier/Dev/DjangoYT2/src/products/templates/products/product_create.html",
@@ -202,6 +233,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"button",
 			"input",
 			"content",
 			"section",
@@ -239,60 +271,87 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 4,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/fichas/templates/fichas/base.html",
+					"file": "src/fichas/models.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 972,
+						"buffer_size": 1976,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								753,
-								753
+								174,
+								174
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"syntax": "Packages/Python/Python.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "src/taller/urls.py",
+					"file": "src/fichas/templates/clientes/cliente_create.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1064,
+						"buffer_size": 630,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								423,
-								423
+								152,
+								152
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/fichas/templates/vehiculos/vehiculo_list.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 619,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								226,
+								226
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -302,20 +361,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "src/fichas/urls.py",
+					"buffer": 3,
+					"file": "src/fichas/views.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2341,
+						"buffer_size": 5284,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								96,
-								96
+								2030,
+								2030
 							]
 						],
 						"settings":
@@ -324,68 +383,96 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 594.0,
+						"translation.y": 918.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/fichas/templates/vehiculos/vehiculo_create.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1154,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								597,
+								597
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/fichas/urls.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2444,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1134,
+								1134
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 432.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "src/fichas/static/generic.html",
+					"buffer": 6,
+					"file": "src/fichas/forms.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6297,
+						"buffer_size": 1453,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								191,
-								191
+								411,
+								411
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"syntax": "Packages/Python/Python.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 304.8,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "src/fichas/static/fichas/elements.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 19220,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								572,
-								572
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 378.4,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
 					"type": "text"
 				}
 			]

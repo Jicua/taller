@@ -3,8 +3,8 @@
 {% block content %}
 
 <form action='.' method='POST'> {% csrf_token %}
-	<h1>Seguro que quiere eliminar al cliente {{ object.nombre }}?</h1>
-	<p><input type='submit' value='Sí' /> <input type="button" onclick="location.href='../';" value="Cancelar" /></p>
+	<h2>Seguro que quiere eliminar al cliente {{ object.nombre }}?</h2>
+	<p><input type='submit' class="red" value='Sí' /> <input type="button" onclick="location.href='../';" value="Cancelar" /></p>
 	
 </form>
 

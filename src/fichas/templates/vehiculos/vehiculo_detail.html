@@ -1,24 +1,29 @@
 {% extends 'fichas/base.html' %}
 
 {% block content %}
-<h2> Vehículo </h2>
-<p> Dueño: <a href = '{{ object.id_cliente.get_absolute_url }}' > {{ object.id_cliente.nombre }} </a> </p>
-<p> Patente: {{ object.patente }} </p>
-<p> Marca: {{ object.marca }} </p>
-<p> Modelo: {{ object.modelo }} </p>
-<p> Kilometraje: {{ object.kilometraje }} </p>
-
-<p><input type="button" onclick="location.href='./editar/';" value="Editar" /> <input type="button" onclick="location.href='./eliminar/';" value="Eliminar" /> <input type="button" onclick="location.href='../';" value="Volver a la lista" /></p>
-
-<h2> Atenciones </h2>
-{% if atenciones_list %}
-	{% for instance in atenciones_list %}
-		<li>
-			<p><a href='./atenciones/{{ instance.id }}'>{{ instance.fecha_entrada }}</a></p>
-		</li>
-	{% endfor %}
-{% else %}
-	<p>Este vehículo no tiene atenciones.</p>
-{% endif %}
-<p><input type="button" onclick="location.href='./atenciones/crear/';" value="Agregar atención" /></p>
+<div class="row">
+	<div class="column">
+		<h2> Vehículo </h2>
+		<p> <b>Dueño:</b> <a href = '{{ object.id_cliente.get_absolute_url }}' > {{ object.id_cliente.nombre }} </a> </p>
+		<p> <b>Patente:</b> {{ object.patente }} </p>
+		<p> <b>Marca:</b> {{ object.marca }} </p>
+		<p> <b>Modelo:</b> {{ object.modelo }} </p>
+		<p> <b>Kilometraje:</b> {{ object.kilometraje }} </p>
+		<p><input type="button" onclick="location.href='./editar/';" value="Editar" /> <input type="button" class="red" onclick="location.href='./eliminar/';" value="Eliminar" /></p>
+		<p><input type="button" onclick="location.href='../';" value="Volver a la lista" /></p>
+	</div>
+	<div class="column">
+		<h2> Atenciones </h2>
+		{% if atenciones_list %}
+			{% for instance in atenciones_list %}
+				<li>
+					<p><a href='./atenciones/{{ instance.id }}'>{{ instance.fecha_entrada }}</a></p>
+				</li>
+			{% endfor %}
+		{% else %}
+			<p>Este vehículo no tiene atenciones.</p>
+		{% endif %}
+		<p><input type="button" onclick="location.href='./atenciones/crear/';" value="Agregar atención" /></p>
+	</div>
+</div>
 {% endblock %}

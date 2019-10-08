@@ -3,7 +3,26 @@
 {% block content %}
 
 <form method='POST'> {% csrf_token %}
-	{{ form.as_p }}
+	<p>Dueño: <select name="id_cliente" required="False">
+				{% if request.GET.cliente %}
+					<option value="{{ request.GET.cliente }}" selected="selected"></option>
+					{% for instance in clientes %}
+						<option value="{{ instance.id }}">{{ instance.nombre }}</option>
+					{% endfor %}
+				{% else %}
+					<option value="Null">(Ninguno)</option>
+					{% for instance in clientes %}
+						<option value="{{ instance.id }}">{{ instance.nombre }}</option>
+					{% endfor %}
+				{% endif %}
+				</select>
+	</p>
+	<p>Patente: <input type='text' name='patente' placeholder='XX-XX-XX' required=True></p>
+	<p>VIN: <input type='text' name='vin' required=False></p>
+	<p>Marca: <input type='text' name='marca' required=False></p>
+	<p>Modelo: <input type='text' name='modelo' required=False></p>
+	<p>Kilometraje: <input type='number' name='vin' min="0" required=False></p>
+	<p>Año: <input type='number' name='anyo' required=False></p>
 	<input type='submit' value='Guardar'/>
 	<input type="button" onclick="location.href='../';" value="Cancelar" />
 </form>

@@ -69,8 +69,10 @@ def vehiculo_create_view(request, cliente = 0):
 	if form.is_valid():
 		form.save()
 		form = VehiculoForm()
+	clientes = Cliente.objects.all().order_by('nombre')
 	context = {
-		'form': form
+		'form': form,
+		'clientes': clientes
 	}
 	return render(request, "vehiculos/vehiculo_create.html", context)
 
@@ -137,7 +139,7 @@ def atencion_update_view(request, id, at):
 	return render(request, "atenciones/atencion_create.html", context)
 
 def atencion_list_view(request):
- 	queryset = Atencion.objects.all().filter(id_vehiculo=id)
+ 	queryset = Atencion.objects.all()
  	context = {
  		"object_list": queryset
  	}
@@ -182,6 +184,16 @@ def detalle_detail_view(request, id, at, de):
 		"object": obj,
 	}
 	return render(request, "detalles/detalle_detail.html", context)
+
+def detalle_delete_view(request, id, at, de):
+	obj = get_object_or_404(Detalle, id=de)
+	if request.method == "POST":
+		obj.delete()
+		return redirect('../../../')
+	context = {
+		"object": obj
+	}
+	return render(request, "detalles/detalle_delete.html", context)
 
 ##########################
 ######## IMAGEN ##########

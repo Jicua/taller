@@ -23,10 +23,23 @@ class VehiculoForm(forms.ModelForm):
 		fields = [
 			'id_cliente',
 			'patente',
+			'vin',
 			'marca',
 			'modelo',
-			'kilometraje'
+			'kilometraje',
+			'anyo'
 		]
+
+class RawVehiculoForm(forms.Form):
+	#self.fields['id_cliente'].queryset	= Cliente.objects.filter(cliente=self.id_cliente)
+	id_cliente	= forms.ModelChoiceField(queryset=Cliente.objects.all(), empty_label="(Ninguno)")
+	
+	patente		= forms.CharField(max_length=6)
+	vin			= forms.CharField(max_length=20)
+	marca		= forms.CharField()
+	modelo 		= forms.CharField()
+	kilometraje	= forms.IntegerField()
+	anyo		= forms.IntegerField()
 
 class AtencionForm(forms.ModelForm):
 	class Meta:
@@ -34,7 +47,8 @@ class AtencionForm(forms.ModelForm):
 		fields = [
 			'id_vehiculo',
 			'fecha_entrada',
-			'fecha_salida'
+			'fecha_salida',
+			'observaciones'
 		]
 
 class DetalleForm(forms.ModelForm):

@@ -28,8 +28,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('fichas/', include('fichas.urls')),
-
-
-
 ]
 urlpatterns += staticfiles_urlpatterns()
