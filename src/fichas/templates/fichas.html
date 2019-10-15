@@ -1,42 +1,41 @@
-{% extends 'fichas/base.html' %}
+{% extends 'base.html' %}
 {% load static %}
-
 {% block content %}
-<style>
-* {
-  box-sizing: border-box;
-}
 
-.column {
-  float: left;
-  width: 33.33%;
-  padding: 5px;
-}
-
-/* Clearfix (clear floats) */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-</style>
-<div class="row">
-  <div class="column">
-    <a href='./clientes/'><img src="{% static 'fichas/images/bokeh_car_lights_bg.jpg' %}" alt="Snow" style="width:100%">
-    <h2><center>Clientes</a></center></h2>
-  </div>
-  <div class="column">
-    <a href='./vehiculos/'><img src="{% static 'fichas/images/bokeh_car_lights_bg.jpg' %}" alt="Forest" style="width:100%">
-    <h2><center>Vehículos</a></center></h2>
-  </div>
-  <div class="column">
-    <a href='./atenciones/'><img src="{% static 'fichas/images/bokeh_car_lights_bg.jpg' %}" alt="Mountains" style="width:100%">
-    <h2><center>Atenciones</a></center></h2>
-  </div>
+<div class="container">
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" name="q" placeholder="Buscar" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+    </form>
+    <br/>
+  <div class="row">
+      <div class="col-sm">
+        <div class="shadow-lg p-3 mb-5 bg-white rounded">
+          <a href="clientes">
+            <img src="{% static 'pages/images/clientes.png' %}" class="img-fluid img-thumbnail"><h1 class="text-center">Clientes</h1>
+          </a>
+        </div>
+    </div>
+      <div class="col-sm">
+        <div class="shadow-lg p-3 mb-5 bg-white rounded">
+        <a href="vehiculos">
+          <img src="{% static 'pages/images/vehiculos.png' %}" class="img-fluid img-thumbnail"><h1 class="text-center">Vehículos</h1>
+        </a>
+      </div>
+    </div>
+      <div class="col-sm">
+        <div class="shadow-lg p-3 mb-5 bg-white rounded">
+        <a href="atenciones">
+            <img src="{% static 'pages/images/atenciones.png' %}" class="img-fluid img-thumbnail"><h1 class="text-center">Atenciones</h1>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="float-right">
+      <a href="/accounts/logout">
+        <input class="btn btn-secondary btn-lg" type="submit" value="Cerrar sesión" />
+      </a>
+    </div>
 </div>
-
-
-
-
 
 {% endblock %}

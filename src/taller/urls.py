@@ -22,11 +22,11 @@ from pages.views import (
     )
 
 urlpatterns = [
-	path('', home_view, name='home'),
-	path('contacto/', contact_view, name='contact'),
-
     path('admin/', admin.site.urls),
 
+    path('', include('pages.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),
     path('fichas/', include('fichas.urls')),
+
 ]
 urlpatterns += staticfiles_urlpatterns()

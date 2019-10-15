@@ -1,13 +1,23 @@
-{% extends 'fichas/base.html' %}
+{% extends 'base.html' %}
 
 {% block content %}
-
+<h3>Creando atención para el vehículo {{ vehiculo.marca }} {{ vehiculo.modelo }} de {{ vehiculo.id_cliente }}</h3>
 <form method='POST'> {% csrf_token %}
-	{{ form.as_p }}
-
-	{{ form.media }}
-	<input type='submit' value='Guardar'/>
-	<input type="button" onclick="location.href='../../';" value="Cancelar" />
+	<p><input type="hidden" name="id_vehiculo" value="{{ vehiculo.id }}"></p>
+	<div class="row">
+		<div class="col">
+			<p>Fecha de entrada: <input type="date" name="fecha_entrada" required></p>
+			<p>Hora de entrada: <input type="time" name="hora_entrada"></p>
+			<p>Observaciones: <input type="text" name="observaciones" required></p>
+		</div>
+		<div class="col">
+			<p>(Opcional)</p>
+			<p>Fecha de salida: <input type="date" name="fecha_salida"></p>
+			<p>Hora de salida: <input type="time" name="hora_salida"></p>
+		</div>
+	</div>
+	<input type='submit' class="btn btn-primary btn-lg" value='Guardar'/>
+	<input type="button" class="btn btn-secondary btn-lg" onclick="location.href='../../../';" value="Cancelar" />
 </form>
 
 {% endblock %}

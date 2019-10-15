@@ -1,4 +1,8 @@
 from django.urls import path
+
+from django.contrib import admin
+from django.urls import path, include
+
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from .views import (
 	fichas_home_view,
@@ -8,6 +12,9 @@ from .views import (
 	cliente_detail_view,
 	cliente_update_view,
 	cliente_delete_view,
+
+	ClienteListView,
+	ClienteDetailView,
 
 	vehiculo_list_view,
 	vehiculo_create_view,
@@ -38,11 +45,14 @@ urlpatterns = [
 	path('clientes/<int:id>/editar/', cliente_update_view, name='cliente-update'),
 	path('clientes/<int:id>/eliminar/', cliente_delete_view, name='cliente-delete'),
 
+	path('clientes2/', ClienteListView.as_view(), name="cliente-list2"),
+	path('clientes2/<int:id>/', ClienteDetailView.as_view(), name="cliente-detail2"),
+
 	######## VEHICULOS #######
 
 	path('vehiculos/', vehiculo_list_view, name='vehiculo-list'),
 	path('vehiculos/crear/', vehiculo_create_view, name='vehiculo-create'),
-	#path('vehiculos/crear/?cliente', vehiculo_create_view, name='vehiculo-create'),
+	path('vehiculos/crear/<int:cliente>', vehiculo_create_view, name='vehiculo-create'),
 	path('vehiculos/<int:id>/', vehiculo_detail_view, name='vehiculo-detail'),
 	path('vehiculos/<int:id>/editar/', vehiculo_update_view, name='vehiculo-update'),
 	path('vehiculos/<int:id>/eliminar/', vehiculo_delete_view, name='vehiculo-delete'),

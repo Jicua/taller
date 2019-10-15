@@ -27,6 +27,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+LOGIN_URL='/accounts/login'
+
+LOGIN_REDIRECT_URL = '/fichas/'
+LOGOUT_REDIRECT_URL = '/'
+
 
 # Application definition
 
@@ -124,6 +129,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-#STATICFILES_DIR = (
-#    os.path.join(BASE_DIR, 'static'),
-#)
+STATICFILES_DIR = (
+    os.path.join(BASE_DIR, 'static'),
+)

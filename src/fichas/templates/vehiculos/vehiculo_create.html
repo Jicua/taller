@@ -1,29 +1,40 @@
-{% extends 'fichas/base.html' %}
+{% extends 'base.html' %}
 
 {% block content %}
 
 <form method='POST'> {% csrf_token %}
-	<p>Dueño: <select name="id_cliente" required="False">
-				{% if request.GET.cliente %}
-					<option value="{{ request.GET.cliente }}" selected="selected"></option>
-					{% for instance in clientes %}
-						<option value="{{ instance.id }}">{{ instance.nombre }}</option>
-					{% endfor %}
-				{% else %}
-					<option value="Null">(Ninguno)</option>
-					{% for instance in clientes %}
-						<option value="{{ instance.id }}">{{ instance.nombre }}</option>
-					{% endfor %}
-				{% endif %}
-				</select>
+	<p>Dueño: 
+		<select name="id_cliente" required="False" {% if duenyo %} disabled {% endif %}>
+			<option value="Null">(Ninguno)</option>
+			{% if duenyo %}
+			<option value="{{ duenyo.id }}" selected="selected">{{ duenyo.nombre }}</option>
+			{% for instance in clientes %}
+			<option value="{{ instance.id }}">{{ instance.nombre }}</option>
+			{% endfor %}
+			{% else %}
+			{% for instance in clientes %}
+			<option value="{{ instance.id }}">{{ instance.nombre }}</option>
+			{% endfor %}
+			{% endif %}
+		</select>
 	</p>
-	<p>Patente: <input type='text' name='patente' placeholder='XX-XX-XX' required=True></p>
-	<p>VIN: <input type='text' name='vin' required=False></p>
-	<p>Marca: <input type='text' name='marca' required=False></p>
-	<p>Modelo: <input type='text' name='modelo' required=False></p>
-	<p>Kilometraje: <input type='number' name='vin' min="0" required=False></p>
-	<p>Año: <input type='number' name='anyo' required=False></p>
-	<input type='submit' value='Guardar'/>
-	<input type="button" onclick="location.href='../';" value="Cancelar" />
+	<p>Patente: <input type='text' name='patente' placeholder='ABCD12' required=True maxlength="6" style="text-transform: uppercase;" pattern="[A-z]{4}\d{2}|[A-z]{2}\d{4}"></p>
+	<p>VIN: <input type='text' name='vin' required=False maxlength="20"></p>
+	<p>Tipo:
+		<select name='tipo' maxlength="40">
+			<option value="Sedán">Sedán</option>
+			<option value="Hatchback">Hatchback</option>
+			<option value="Station Wagon">Station Wagon</option>
+			<option value="SUV">SUV</option>
+			<option value="Camioneta">Camioneta</option>
+			<option value="Furgón">Furgón</option>
+		</select>
+	</p>
+	<p>Marca: <input type='text' name='marca' required=False maxlength="40"></p>
+	<p>Modelo: <input type='text' name='modelo' required=False maxlength="40"></p>
+	<p>Kilometraje: <input type='number' name='kilometraje' min="0" required=False></p>
+	<p>Año: <input type='number' name='anyo' min="1930" required=False></p>
+	<input type='submit' class="btn btn-primary" value='Guardar'/>
+	<input type="button" class="btn btn-secondary" onclick="location.href='../';" value="Cancelar" />
 </form>
 {% endblock %}

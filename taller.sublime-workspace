@@ -32,55 +32,37 @@
 	"buffers":
 	[
 		{
-			"file": "src/fichas/models.py",
-			"settings":
-			{
-				"buffer_size": 1976,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/fichas/templates/clientes/cliente_create.html",
-			"settings":
-			{
-				"buffer_size": 630,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/fichas/templates/vehiculos/vehiculo_list.html",
-			"settings":
-			{
-				"buffer_size": 619,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/fichas/views.py",
-			"settings":
-			{
-				"buffer_size": 5284,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "src/fichas/templates/vehiculos/vehiculo_create.html",
 			"settings":
 			{
-				"buffer_size": 1154,
+				"buffer_size": 1695,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/fichas/urls.py",
+			"file": "src/fichas/templates/atenciones/atencion_list.html",
 			"settings":
 			{
-				"buffer_size": 2444,
+				"buffer_size": 1343,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/fichas/models.py",
+			"settings":
+			{
+				"buffer_size": 2222,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/fichas/templates/vehiculos/vehiculo_detail.html",
+			"settings":
+			{
+				"buffer_size": 1400,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -89,7 +71,7 @@
 			"file": "src/fichas/forms.py",
 			"settings":
 			{
-				"buffer_size": 1453,
+				"buffer_size": 1942,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -131,48 +113,57 @@
 		"/C/Users/Javier/GitHub/seminariodegrado/src",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/atenciones",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/clientes",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/fichas",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/vehiculos",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/taller"
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/detalles",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/vehiculos"
 	],
 	"file_history":
 	[
-		"/C/Users/Javier/GitHub/seminariodegrado/src/taller/settings.py",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/fichas.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/atenciones/atencion_list.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/static/fichas/css/style.css",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/fichas/base.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/clientes/cliente_list.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/urls.py",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/models.py",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/vehiculos/vehiculo_detail.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/atenciones/atencion_detail.html",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/views.py",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/atenciones/atencion_list_todas.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/vehiculos/vehiculo_detail.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/forms.py",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/models.py",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/atenciones/atencion_detail.html",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/clientes/cliente_delete.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/detalles/detalle_delete.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/detalles/detalle_detail.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/vehiculos/vehiculo_delete.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/vehiculos/vehiculo_list.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/atenciones/atencion_list.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/atenciones/atencion_delete.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/atenciones/atencion_create.html",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/clientes/cliente_create.html",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/vehiculos/vehiculo_create.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/pages/views.py",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/clientes/cliente_detail.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/atenciones/atencion_delete.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/forms.py",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/detalles/detalle_detail.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/vehiculos/vehiculo_delete.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/detalles/detalle_delete.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/clientes/cliente_list.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/taller/settings.py",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/fichas.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/templates/navbar.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/pages/templates/contact.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/pages/templates/home.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/templates/registration/login.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/urls.py",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/taller/urls.py",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/registration/login.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/templates/base.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/login.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/pages/urls.py",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/fichas/base.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/pages/templates/base.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/detalles/detalle_create.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/pages/templates/navbar.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/fichas/navbar.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/static/fichas/css/style.css",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/atenciones/atencion_list_todas.html",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/static/generic.html",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/static/js/init.js",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/static/css/style.css",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/taller/urls.py",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/static/css/style.css",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/static/style.css",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/static/fichas/elements.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/fichas/navbar.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/vehiculos/vehiculo_list.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/detalles/detalle_create.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/atenciones/atencion_create.html",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/navbar.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/templates/base.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/templates/navbar.html",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/base.html",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/static/style.css",
 		"/C/Users/Javier/Dev/DjangoYT2/src/products/templates/products/product_delete.html",
@@ -181,7 +172,6 @@
 		"/C/Users/Javier/GitHub/seminariodegrado/src/taller/templates/clientes/cliente_detail.html",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/templates/cliente/detail.html",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/templates/home.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/pages/views.py",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/templates/contact.html",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/instrucciones.md",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/admin.py",
@@ -233,6 +223,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			">\n",
+			"lg",
 			"button",
 			"input",
 			"content",
@@ -271,81 +263,53 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/fichas/models.py",
+					"file": "src/fichas/templates/vehiculos/vehiculo_create.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1976,
+						"buffer_size": 1695,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								174,
-								174
+								964,
+								964
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Python/Python.sublime-syntax",
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 108.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "src/fichas/templates/clientes/cliente_create.html",
+					"file": "src/fichas/templates/atenciones/atencion_list.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 630,
+						"buffer_size": 1343,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								152,
-								152
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/fichas/templates/vehiculos/vehiculo_list.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 619,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								226,
-								226
+								0,
+								0
 							]
 						],
 						"settings":
@@ -357,110 +321,82 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "src/fichas/views.py",
+					"buffer": 2,
+					"file": "src/fichas/models.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5284,
+						"buffer_size": 2222,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2030,
-								2030
+								754,
+								754
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Python/Python.sublime-syntax",
 							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 918.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "src/fichas/templates/vehiculos/vehiculo_create.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1154,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								597,
-								597
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "src/fichas/urls.py",
+					"buffer": 3,
+					"file": "src/fichas/templates/vehiculos/vehiculo_detail.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2444,
+						"buffer_size": 1400,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1134,
-								1134
+								310,
+								310
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Python/Python.sublime-syntax",
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 432.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 4,
 					"file": "src/fichas/forms.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1453,
+						"buffer_size": 1942,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								411,
-								411
+								675,
+								675
 							]
 						],
 						"settings":
@@ -469,10 +405,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 304.8,
+						"translation.y": 108.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 4,
 					"type": "text"
 				}
 			]

@@ -1,9 +1,13 @@
-{% extends 'fichas/base.html' %}
+{% extends 'base.html' %}
 
 {% block content %}
 
 <h2> Detalle de atención</h2>
 <p> {{ object.descripcion }} </p>
-
-<p><input type="button" onclick="location.href='./editar/';" value="Editar" /> <input type="button" class="red" onclick="location.href='./eliminar/';" value="Eliminar" /> <input type="button" onclick="location.href='../../';" value="Volver a atención" /></p>
+<p>
+	{% if user.is_staff %}
+	<input type="button" class="btn btn-success btn-lg" onclick="location.href='./editar/';" value="Editar" />
+	<input type="button" class="btn btn-danger btn-lg" onclick="location.href='./eliminar/';" value="Eliminar" />
+	{% endif %}
+	<input type="button" class="btn btn-secondary btn-lg" onclick="location.href='../../';" value="Volver a atención" /></p>
 {% endblock %}

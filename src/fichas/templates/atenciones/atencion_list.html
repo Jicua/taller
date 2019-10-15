@@ -1,8 +1,15 @@
-{% extends 'fichas/base.html' %}
-
+{% extends 'base.html' %}
+{% load static %}
 {% block content %}
-<table>
-	<thead>
+
+<h1><img src="{% static 'pages/images/atenciones48.png' %}">Atenciones</h1>
+<form class="form-inline my-2 my-lg-0">
+	<input class="form-control mr-sm-2" type="search" name="q" placeholder="Buscar" aria-label="Search">
+	<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+</form>
+<br/>
+<table class="table table-striped table-hover">
+	<thead class="thead-dark">
 		<tr>
 			<th>Vehículo</th>
 			<th>Dueño</th>
@@ -12,14 +19,20 @@
 	</thead>
 	{% for instance in object_list %}
 	<tr>
-		<td><a href='/fichas/vehiculos/{{ instance.id_vehiculo }}/atenciones/{{ instance.id }}'>{{ instance.id_vehiculo }}</a></td>
-		<td>{{ instance.id_vehiculo.id_cliente }}</td>
+		<td><a href='/fichas/vehiculos/{{ instance.id_vehiculo.id }}/atenciones/{{ instance.id }}'>{{ instance.id_vehiculo.marca }} {{ instance.id_vehiculo.modelo }}</a></td>
+		<td><a href='{{ instance.id_vehiculo.id_cliente.get_absolute_url }}'>{{ instance.id_vehiculo.id_cliente }}</a></td>
 		<td>{{ instance.fecha_entrada }}</td>
-		<td>{{ instance.fecha_salida }}</td>
+		<td>
+			{% if instance.fecha_salida == null %}
+			-----
+			{% else %}
+			{{ instance.fecha_salida }}
+			{% endif %}
+		</td>
 	</tr>
 	{% endfor %}
 </table>
-
-<p><a href='./crear/'>Agregar nueva atención</a></p>
-<p><a href='../'>Volver a fichas</a></p>
+<form action="./crear/">
+    <input class="btn btn-primary btn-lg" type="submit" value="Nueva atención" /> <input type="button" class="btn btn-secondary btn-lg" onclick="location.href='../';" value="Volver a fichas" />
+</form>
 {% endblock %}

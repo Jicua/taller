@@ -19,6 +19,7 @@ class Vehiculo(models.Model):
 	id_cliente	= models.ForeignKey('Cliente', blank = True, null = True, on_delete = models.SET_NULL, verbose_name='Dueño')
 	patente		= models.CharField(max_length = 6)
 	vin 		= models.CharField(max_length = 20, blank = True, null = True)
+	tipo		= models.CharField(max_length = 40, default="Sedán")
 	marca		= models.CharField(max_length = 40)
 	modelo		= models.CharField(max_length = 40)
 	kilometraje	= models.PositiveIntegerField()
@@ -27,14 +28,19 @@ class Vehiculo(models.Model):
 	def get_absolute_url(self):
 		return reverse("fichas:vehiculo-detail", kwargs={"id": self.id})
 
-	def __str__(self):
-		return  self.marca + ' ' + self.modelo
+	def get_url(id):
+		return reverse("fichas:vehiculo-detail", kwargs={"id": id})
+
+	#def __str__(self):
+	#	return  self.marca + ' ' + self.modelo
 	
 class Atencion(models.Model):
 	id_vehiculo		= models.ForeignKey('Vehiculo', on_delete=models.CASCADE, verbose_name='Vehículo')
-	fecha_entrada	= models.DateTimeField()
-	fecha_salida	= models.DateTimeField(blank=True)
-	observaciones	= models.CharField(blank=True, max_length=500)
+	fecha_entrada	= models.DateField()
+	fecha_salida	= models.DateField(blank=True, null=True)
+	hora_entrada	= models.TimeField(blank=True, null=True)
+	hora_salida		= models.TimeField(blank=True, null=True)
+	observaciones	= models.CharField(max_length=500)
 
 	def get_absolute_url(self):
 		return reverse("fichas:atencion-detail", kwargs={"id": self.id_vehiculo, "at": self.id})

@@ -1,30 +1,42 @@
-{% extends 'fichas/base.html' %}
+{% extends 'base.html' %}
 
 {% block content %}
-<div class="row">
-	<div class="column">
+<div class="card">
+	<div class="card-body">
 		<h2> {{ object.nombre }} </h2>
 		<p> <b>Rut:</b> {{ object.rut }} </p>
 		<p> <b>Teléfono:</b> {{ object.telefono }} </p>
 		<p> <b>Email:</b> {{ object.email }} </p>
-
-		<p><input type="button" onclick="location.href='./editar/';" value="Editar" /> <input type="button" class="red" onclick="location.href='./eliminar/';" value="Eliminar" /></p>
-		<p><input type="button" onclick="location.href='../';" value="Volver a la lista" /></p>
+		<p>
+			{% if user.is_staff %}
+			<input type="button" class="btn btn-success btn-lg" onclick="location.href='./editar/';" value="Editar" />
+			<input type="button" class="btn btn-danger btn-lg" onclick="location.href='./eliminar/';" value="Eliminar" />
+			{% endif %}
+			<input type="button" class="btn btn-secondary btn-lg" onclick="location.href='../';" value="Volver a la lista" />
+		</p>
 	</div>
-	<div class="column">
+</div>
+<div class="card">
+	<div class="card-body">
 		<h2>Vehículos</h2>
 		{% if vehiculos_list %}
-			<ul>
-			{% for instance in vehiculos_list %}
-				<li>
-					<a href='{{ instance.get_absolute_url }}'>{{ instance.marca }} {{ instance.modelo }}</a>
-				</li>
-			{% endfor %}
-			</ul>
-		{% else %}
-			<p>Este cliente no tiene vehículos.</p>
-		{% endif %}
-		<p><input type="button" onclick="location.href='../../vehiculos/crear?cliente={{ object.id }}';" value="Agregar Vehículo" /></p>
+		<ul>
+		{% for instance in vehiculos_list %}
+			<li>
+				<a href='{{ instance.get_absolute_url }}'>{{ instance.marca }} {{ instance.modelo }}</a>
+			</li>
+		{% endfor %}
+		</ul>
+	{% else %}
+		<p>Este cliente no tiene vehículos.</p>
+	{% endif %}
+	<p>
+	{% if user.is_staff %}
+	<form action="../../vehiculos/crear/{{ object.id }}">
+		<input class="btn btn-primary btn-lg" type=submit value="Agregar Vehículo" />
+	</form>
+	{% endif %}
+	</p>
 	</div>
 </div>
 {% endblock %}

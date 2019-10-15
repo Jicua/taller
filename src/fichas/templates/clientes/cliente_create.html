@@ -1,15 +1,14 @@
-{% extends 'fichas/base.html' %}
+{% extends 'base.html' %}
 
 {% block content %}
-<section>
 <form method='POST'> {% csrf_token %}
-	<div class="forma">
-		<p>Rut: <input type='text' name='rut' placeholder='Ingrese rut' required=True></p>
-		<p>Nombre: <input type='text' name='nombre' placeholder='Ingrese nombre' required=True></p>
-		<p>Teléfono: <input type='text' name='telefono' value='+56' required=True></p>
-		<p>E-mail: <input type='text' name='email' placeholder='Ingrese e-mail' required=True></p>
-		<input type='submit' value='Guardar'/> <input type="button" onclick="location.href='../';" value="Cancelar" />
+	<div class="form-group">
+		<p>Rut: <input type='text' name='rut' placeholder='Ingrese rut' required=True maxlength="10"></p>
+		<p>Nombre: <input type='text' name='nombre' placeholder='Ingrese nombre' required=True maxlength="100"></p>
+		<p>Teléfono: <input type='text' name='telefono' value='+56' required=True maxlength="12"></p>
+		<p>E-mail: <input type='text' name='email' placeholder='Ingrese e-mail' required=True maxlength="100"></p>
 	</div>
+	<input type='submit' class="btn btn-primary" onclick="location.href='../';" value='Guardar'/>
+	<input type="button" class="btn btn-secondary" onclick="location.href='../';" value="Cancelar" />
 </form>
-</section>
 {% endblock %}

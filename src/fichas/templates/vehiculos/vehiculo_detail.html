@@ -1,29 +1,37 @@
-{% extends 'fichas/base.html' %}
+{% extends 'base.html' %}
 
 {% block content %}
-<div class="row">
-	<div class="column">
+<div class="card">
+	<div class="card-body">
 		<h2> Vehículo </h2>
 		<p> <b>Dueño:</b> <a href = '{{ object.id_cliente.get_absolute_url }}' > {{ object.id_cliente.nombre }} </a> </p>
 		<p> <b>Patente:</b> {{ object.patente }} </p>
+		<p> <b>Tipo:</b> {{ object.tipo }} </p>
 		<p> <b>Marca:</b> {{ object.marca }} </p>
 		<p> <b>Modelo:</b> {{ object.modelo }} </p>
 		<p> <b>Kilometraje:</b> {{ object.kilometraje }} </p>
-		<p><input type="button" onclick="location.href='./editar/';" value="Editar" /> <input type="button" class="red" onclick="location.href='./eliminar/';" value="Eliminar" /></p>
-		<p><input type="button" onclick="location.href='../';" value="Volver a la lista" /></p>
+		<p>
+			{% if user.is_staff %}
+			<input type="button" class="btn btn-success btn-lg" onclick="location.href='./editar/';" value="Editar" />
+			<input type="button" class="btn btn-danger btn-lg" onclick="location.href='./eliminar/';" value="Eliminar" />
+			{% endif %}
+			<input type="button" class="btn btn-secondary btn-lg" onclick="location.href='../';" value="Volver a la lista" />
+		</p>
 	</div>
-	<div class="column">
+</div>
+<div class="card">
+	<div class="card-body">
 		<h2> Atenciones </h2>
 		{% if atenciones_list %}
 			{% for instance in atenciones_list %}
 				<li>
-					<p><a href='./atenciones/{{ instance.id }}'>{{ instance.fecha_entrada }}</a></p>
+					<p><a href='./atenciones/{{ instance.id }}'>{{ instance.fecha_entrada }} - {{ instance.observaciones }}</a></p>
 				</li>
 			{% endfor %}
 		{% else %}
 			<p>Este vehículo no tiene atenciones.</p>
 		{% endif %}
-		<p><input type="button" onclick="location.href='./atenciones/crear/';" value="Agregar atención" /></p>
+		<p><input type="button" class="btn btn-primary btn-lg" onclick="location.href='./atenciones/crear/';" value="Agregar atención" /></p>
 	</div>
-</div>
+</div>	
 {% endblock %}
