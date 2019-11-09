@@ -1,8 +1,34 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
+<h1><img src="{% static 'pages/images/clientes48.png' %}">Clientes</h1>
 <form class="form-inline my-2 my-lg-0" action=".">
 	<input class="form-control mr-sm-2" type="search" name="q" placeholder="Buscar" aria-label="Search">
 	<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
 </form>
-<p>Buscó {{ query }}</p>
+{% if query %}
+<p class="lead mt-2">Buscó {{ query }}</p>
+{% endif %}
+
+{% if cliente_list %}
+<table class="table table-striped table-hover">
+	<thead class="thead-dark">
+		<tr>
+			<th>Nombre</th>
+			<th>Teléfono</th>
+			<th>Email</th>
+		</tr>
+	</thead>
+	{% for cliente in cliente_list %}
+	<tr>
+		<td><a href='{{ cliente.get_absolute_url }}'>{{ cliente.nombre }}</a></td>
+		<td>{{ cliente.telefono }}</td>
+		<td>{{ cliente.email }}</td>
+	</tr>
+	{% endfor %}
+</table>
+{% else %}
+<p>No se encontraron resultados.</p>
+{% endif %}
+<input type="button" class="btn btn-secondary btn-lg" onclick="location.href='../';" value="Volver a la lista" />
 {% endblock %}

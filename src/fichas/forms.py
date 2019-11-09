@@ -130,7 +130,8 @@ class DetalleForm(forms.ModelForm):
 		model = Detalle
 		fields = [
 			'id_atencion',
-			'descripcion'
+			'descripcion',
+			'image'
 		]
 
 class ImagenForm(forms.ModelForm):

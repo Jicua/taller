@@ -2,13 +2,20 @@
 
 {% block content %}
 
-<form method='POST'> {% csrf_token %}
-	<p><input type="hidden" name="id_atencion" value="{{ atencion.id }}"></p>
-	<p>Descripción:</p> {{ form.descripcion }}
+<form method='POST' enctype='multipart/form-data'> {% csrf_token %}
+	<div class="row">
+		<div class="column px-4">
+			<input type="hidden" name="id_atencion" value="{{ atencion.id }}">
+			<p>Descripción:</p> {{ form.descripcion }}
+		</div>
+		<div class="column px-4">
+			<p>Agregar una imágen:</p> {{ form.image }}
+		</div>
+	</div>
 	<br/>
-	<br/>
-	<input type='submit' class="btn btn-primary btn-lg" value='Guardar'/>
-	<input type="button" class="btn btn-secondary btn-lg" onclick="goBack();" value="Cancelar" />
+		<input type='submit' class="btn btn-primary btn-lg" value='Guardar'/>
+		<input type="button" class="btn btn-secondary btn-lg" onclick="goBack();" value="Cancelar" />
+
 </form>
 
 {% endblock %}

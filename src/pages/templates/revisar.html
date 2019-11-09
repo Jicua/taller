@@ -12,7 +12,7 @@
 				<p>Número de atención:</p>
 				<p><input type="number" pattern="[0-9]*" name="numero" min="0" required></p>
 				<p>PIN:</p>
-				<p><input type="number" pattern="[0-9]*" name="pin" placeholder="xxxx" max="9999" required oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type = "number" maxlength = "4"></p>
+				<p><input type="number" pattern="[0-9]*" name="pin" placeholder="xxxx" min="0" max="9999" required oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type = "number" maxlength = "4"></p>
 				<p><input type="submit" class="btn btn-primary btn-lg" value="Buscar"></p>
 			</form>
 		</div>

@@ -3,11 +3,31 @@
 {% block content %}
 
 <h2> Detalle de atención</h2>
-<p> {{ object.descripcion }} </p>
-<p>
+<div class="row">
+	<div class="column">
+		<div class="card px-4 mr-4 mb-4">
+			<div class="card-body">
+				<p> Descripción: </p>
+				<p> {{ object.descripcion }} </p>
+			</div>
+		</div>
+	</div>
+	{% if object.image %}
+	<div class="column">
+		<div class="card px-4 mr-4 mb-4">
+			<div class="card-body">
+				<a href="{{ object.image.url }}"> <img src="{{ object.image.url }}" width="500" height="400" class="card-img-top"/></a>
+			</div>
+		</div>
+	</div>
+	{% endif %}
+</div>
+
 	{% if user.is_staff %}
+<p>
 	<input type="button" class="btn btn-success btn-lg" onclick="location.href='./editar/';" value="Editar" />
 	<input type="button" class="btn btn-danger btn-lg" onclick="location.href='./eliminar/';" value="Eliminar" />
 	{% endif %}
-	<input type="button" class="btn btn-secondary btn-lg" onclick="location.href='../../';" value="Volver a atención" /></p>
+	<input type="button" class="btn btn-secondary btn-lg" onclick="location.href='../../';" value="Volver a atención" />
+</p>
 {% endblock %}

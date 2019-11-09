@@ -18,13 +18,6 @@ from .forms import RawClienteForm, RawVehiculoForm, RawAtencionForm
 def fichas_home_view(request, *args, **kwargs):
 	return render(request, "fichas.html", {})
 
-def cliente_search_view(request):
-	query = request.GET.get('q', None)
-	context = {
-		"query": query
-	}
-	return render(request, "clientes/cliente_search.html", context)
-
 ##########################
 ######## CLIENTE #########
 ##########################
@@ -42,6 +35,18 @@ def cliente_search_view(request):
 # 		'form': my_form
 # 	}
 # 	return render(request, "clientes/cliente_create.html", context)
+
+@login_required
+def cliente_search_view(request):
+	query = request.GET.get('q', None)
+	context = {}
+	if query is not None:
+		cliente_list = Cliente.objects.search(query=query)
+		context = {
+			"query": query,
+			"cliente_list": cliente_list
+		}
+	return render(request, "clientes/cliente_search.html", context)
 
 @login_required
 @staff_member_required
@@ -139,6 +144,18 @@ class ClienteDetailView(DetailView):
 # 	return render(request, "vehiculos/vehiculo_create.html", context)
 
 @login_required
+def vehiculo_search_view(request):
+	query = request.GET.get('q', None)
+	context = {}
+	if query is not None:
+		vehiculo_list = Vehiculo.objects.search(query=query)
+		context = {
+			"query": query,
+			"vehiculo_list": vehiculo_list
+		}
+	return render(request, "vehiculos/vehiculo_search.html", context)
+
+@login_required
 @staff_member_required
 def vehiculo_create_view(request, cliente = 0):
 	form = VehiculoForm(request.POST or None)
@@ -225,6 +242,18 @@ def vehiculo_delete_view(request, id):
 # 	}
 # 	print(request.POST)
 # 	return render(request, "atenciones/atencion_create.html", context)
+
+@login_required
+def atencion_search_view(request):
+	query = request.GET.get('q', None)
+	context = {}
+	if query is not None:
+		atencion_list = Atencion.objects.search(query=query)
+		context = {
+			"query": query,
+			"atencion_list": atencion_list
+		}
+	return render(request, "atenciones/atencion_search.html", context)
 
 @login_required
 def atencion_create_view(request, id = 0):
@@ -331,7 +360,7 @@ def revisar_view(request):
 
 @login_required
 def detalle_create_view(request, id, at):
-	form = DetalleForm(request.POST or None)
+	form = DetalleForm(request.POST or None, request.FILES or None)
 	if form.is_valid():
 		form.save()
 		form = DetalleForm()

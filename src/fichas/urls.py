@@ -24,6 +24,8 @@ from .views import (
 	vehiculo_update_view,
 	vehiculo_delete_view,
 
+	vehiculo_search_view,
+
 	atencion_list_view,
 	atencion_create_noauto_view,
 
@@ -31,6 +33,8 @@ from .views import (
 	atencion_detail_view,
 	atencion_update_view,
 	atencion_delete_view,
+
+	atencion_search_view,
 
 	detalle_create_view,
 	detalle_detail_view,
@@ -64,10 +68,14 @@ urlpatterns = [
 	path('vehiculos/<int:id>/editar/', vehiculo_update_view, name='vehiculo-update'),
 	path('vehiculos/<int:id>/eliminar/', vehiculo_delete_view, name='vehiculo-delete'),
 
+	path('vehiculos/search/', vehiculo_search_view, name='vehiculo-search'),
+
 	####### ATENCIONES #######
 
 	path('atenciones/', atencion_list_view, name ='atencion-list'),
 	path('atenciones/crear/', atencion_create_noauto_view, name ='atencion-create-noauto'),
+
+	path('atenciones/search/', atencion_search_view, name='atencion-search'),
 
 
 	######## VEHICULOS/ATENCIONES #######

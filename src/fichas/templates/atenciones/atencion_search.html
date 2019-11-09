@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<h1><img src="{% static 'pages/images/atenciones48.png' %}">Atenciones</h1>
+<form class="form-inline my-2 my-lg-0" action=".">
+	<input class="form-control mr-sm-2" type="search" name="q" placeholder="Buscar" aria-label="Search">
+	<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+</form>
+{% if query %}
+<p class="lead mt-2">Buscó {{ query }}</p>
+{% endif %}
+
+{% if atencion_list %}
+<table class="table table-striped table-hover">
+	<thead class="thead-dark">
+		<tr>
+			<th>Atención</th>
+			<th>Vehículo</th>
+			<th>Dueño</th>
+			<th>Estado</th>
+			<th>Fecha de entrada</th>
+			<th>Fecha de salida</th>
+		</tr>
+	</thead>
+	{% for atencion in atencion_list %}
+	<tr>
+		<td><a href='/fichas/vehiculos/{{ atencion.id_vehiculo.id }}/atenciones/{{ atencion.id }}/'>{{ atencion.observaciones }}</a></td>
+		<td><a href='/fichas/vehiculos/{{ atencion.id_vehiculo.id }}/'>{{ atencion.id_vehiculo.marca }} {{ atencion.id_vehiculo.modelo }}</a></td>
+		<td><a href='{{ atencion.id_vehiculo.id_cliente.get_absolute_url }}'>{{ atencion.id_vehiculo.id_cliente }}</a></td>
+		<td>{% if atencion.estado %} <font color="red">En proceso</font> {% else %} <font color="green">Listo</font> {% endif %}</td>
+		<td>{{ atencion.fecha_entrada }}</td>
+		<td>
+			{% if atencion.fecha_salida == null %}
+			-----
+			{% else %}
+			{{ atencion.fecha_salida }}
+			{% endif %}
+		</td>
+	</tr>
+	{% endfor %}
+</table>
+{% else %}
+<p>No se encontraron resultados.</p>
+{% endif %}
+<input type="button" class="btn btn-secondary btn-lg" onclick="location.href='../';" value="Volver a la lista" />
+{% endblock %}
