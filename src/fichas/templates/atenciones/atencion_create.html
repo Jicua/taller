@@ -1,23 +1,33 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h3>Creando atención para el vehículo {{ vehiculo.marca }} {{ vehiculo.modelo }} de {{ vehiculo.id_cliente }}</h3>
+{% if vehiculo %}
+<h3>Creando atención para el vehículo</h3>
+<h2>{{ vehiculo.marca }} {{ vehiculo.modelo }} de {{ vehiculo.id_cliente }}</h2>
+<br/>
+{% endif %}
 <form method='POST'> {% csrf_token %}
+	{% if vehiculo %}
 	<p><input type="hidden" name="id_vehiculo" value="{{ vehiculo.id }}"></p>
+	{% else %}
+
+	{% endif %}
 	<div class="row">
 		<div class="col">
-			<p>Fecha de entrada: <input type="date" name="fecha_entrada" required></p>
-			<p>Hora de entrada: <input type="time" name="hora_entrada"></p>
-			<p>Observaciones: <input type="text" name="observaciones" required></p>
+			<p>Resumen: <input type="text" name="observaciones" required value="{{ obj.observaciones }}"></p>
+			<p>Fecha de entrada: <input type="date" name="fecha_entrada" required value="{{ obj.fecha_entrada|date:'Y-m-d' }}"></p>
+			<p>Hora de entrada: <input type="time" name="hora_entrada" value="{{ obj.hora_entrada|time:'H:i' }}"></p>
 		</div>
 		<div class="col">
 			<p>(Opcional)</p>
-			<p>Fecha de salida: <input type="date" name="fecha_salida"></p>
-			<p>Hora de salida: <input type="time" name="hora_salida"></p>
+			<p>Fecha de salida: <input type="date" name="fecha_salida" value="{{ obj.fecha_salida }}"></p>
+			<p>Hora de salida: <input type="time" name="hora_salida" value="{{ obj.hora_salida }}"></p>
 		</div>
 	</div>
+	<p>Estado:</p>
+	<p><input type="radio" name="estado" value="True" {% if obj.estado == True %} checked {% endif %}><font color="red"> En proceso</font></p>
+	<p><input type="radio" name="estado" value="False" {% if obj.estado == False %} checked {% endif %}><font color="green"> Listo</p>
 	<input type='submit' class="btn btn-primary btn-lg" value='Guardar'/>
-	<input type="button" class="btn btn-secondary btn-lg" onclick="location.href='../../../';" value="Cancelar" />
+	<input type="button" class="btn btn-secondary btn-lg" onclick="goBack()" value="Cancelar" />
 </form>
-
 {% endblock %}

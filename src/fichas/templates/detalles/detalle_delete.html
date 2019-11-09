@@ -4,7 +4,9 @@
 
 <form action='.' method='POST'> {% csrf_token %}
 	<h2>Seguro que quiere eliminar el detalle {{ object.descripcion }}?</h2>
-	<p><input type='submit' class="red" value='Sí' /> <input type="button" onclick="location.href='../';" value="Cancelar" /></p>
+	<p>
+		<input type='submit' class="btn btn-danger btn-lg" value='Sí' />
+		<input type="button" onclick="location.href='../';" class="btn btn-secondary btn-lg" value="Cancelar" /></p>
 	
 </form>
 

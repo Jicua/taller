@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+{% if not correcto %}
+<center>
+<div class="col d-flex justify-content-center">
+	<div class="card mb-4">
+		<div class="card-body">
+			<h1><img src="{% static 'pages/images/lupa32.png' %}"> Buscar atención</h1>
+			<form method="post"> {% csrf_token %}
+				<p>Número de atención:</p>
+				<p><input type="number" pattern="[0-9]*" name="numero" min="0" required></p>
+				<p>PIN:</p>
+				<p><input type="number" pattern="[0-9]*" name="pin" placeholder="xxxx" max="9999" required oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type = "number" maxlength = "4"></p>
+				<p><input type="submit" class="btn btn-primary btn-lg" value="Buscar"></p>
+			</form>
+		</div>
+	</div>
+</div>
+<h2><font color="red">{{ error }}</font><h2>
+</center>
+{% endif %}
+
+{% if correcto %}
+<div class="row">
+	<div class="column">
+		<div class="card px-4 mr-4 mb-4">
+			<div class="card-body">
+				<h1>Vehículo</h1>
+				<p> <b>Modelo:</b> {{ object.id_vehiculo.marca }} {{ object.id_vehiculo.modelo }} </p>
+				<p> <b>Patente:</b> {{ object.id_vehiculo.patente }}
+				<p> <b>Dueño:</b> {{ object.id_vehiculo.id_cliente }} </p>
+			</div>
+		</div>
+		<div class="card px-4 mr-4 mb-4">
+			<div class="card-body">
+				<h1>Atención</h1>
+				<p> <b>Estado:</b> {% if object.estado %} <font color="red">En proceso</font> {% else %} <font color="green">Listo</font> {% endif %} </p>
+				<p> <b>Resumen:</b> {{ object.observaciones }} </p>
+				<p> <b>Fecha de entrada:</b> {{ object.fecha_entrada }} </p>
+				<p> <b>Fecha de salida:</b>{% if object.fecha_salida %} {{ object.fecha_salida }} {% else %} ----- {% endif %}</p>
+			</div>
+		</div>
+	</div>
+	<div class="column">
+		<div class="card px-4">
+			<div class="card-body">
+				<h2> Detalles </h2>
+				{% if detalles_list %}
+				{% for instance in detalles_list %}
+				<li>
+					<p><a href='./detalles/{{ instance.id }}'>{{ instance.descripcion }}</a></p>
+				</li>
+				{% endfor %}
+				{% else %}
+				<p>Esta atención no tiene detalles.</p>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+{% endif %}
+
+{% endblock %}

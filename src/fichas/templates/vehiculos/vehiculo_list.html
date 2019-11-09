@@ -12,6 +12,8 @@
 		<tr>
 			<th>Marca</th>
 			<th>Modelo</th>
+			<th>Tipo</th>
+			<th>Patente</th>
 			<th>Dueño</th>
 		</tr>
 	</thead>
@@ -19,6 +21,8 @@
 	<tr>
 		<td><a href='{{ instance.get_absolute_url }}'>{{ instance.marca }}</a></td>
 		<td><a href='{{ instance.get_absolute_url }}'>{{ instance.modelo }}</a></td>
+		<td><a href='{{ instance.get_absolute_url }}'>{{ instance.tipo }}</a></td>
+		<td><a href='{{ instance.get_absolute_url }}'>{{ instance.patente }}</a></td>
 		<td><a href='{{ instance.id_cliente.get_absolute_url }}'>{{ instance.id_cliente }}</a></td>
 	</tr>
 	{% endfor %}

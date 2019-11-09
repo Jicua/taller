@@ -13,6 +13,8 @@ from .views import (
 	cliente_update_view,
 	cliente_delete_view,
 
+	cliente_search_view,
+
 	ClienteListView,
 	ClienteDetailView,
 
@@ -23,6 +25,8 @@ from .views import (
 	vehiculo_delete_view,
 
 	atencion_list_view,
+	atencion_create_noauto_view,
+
 	atencion_create_view,
 	atencion_detail_view,
 	atencion_update_view,
@@ -30,6 +34,7 @@ from .views import (
 
 	detalle_create_view,
 	detalle_detail_view,
+	detalle_update_view,
 	detalle_delete_view
 	)
 
@@ -45,6 +50,8 @@ urlpatterns = [
 	path('clientes/<int:id>/editar/', cliente_update_view, name='cliente-update'),
 	path('clientes/<int:id>/eliminar/', cliente_delete_view, name='cliente-delete'),
 
+	path('clientes/search/', cliente_search_view, name='cliente-search'),
+
 	path('clientes2/', ClienteListView.as_view(), name="cliente-list2"),
 	path('clientes2/<int:id>/', ClienteDetailView.as_view(), name="cliente-detail2"),
 
@@ -59,7 +66,9 @@ urlpatterns = [
 
 	####### ATENCIONES #######
 
-	path('atenciones/', atencion_list_view, name ='atencion-list-view'),
+	path('atenciones/', atencion_list_view, name ='atencion-list'),
+	path('atenciones/crear/', atencion_create_noauto_view, name ='atencion-create-noauto'),
+
 
 	######## VEHICULOS/ATENCIONES #######
 
@@ -72,6 +81,7 @@ urlpatterns = [
 
 	path('vehiculos/<int:id>/atenciones/<int:at>/detalles/crear/', detalle_create_view, name='detalle-create'),
 	path('vehiculos/<int:id>/atenciones/<int:at>/detalles/<int:de>/', detalle_detail_view, name='detalle-detail'),
+	path('vehiculos/<int:id>/atenciones/<int:at>/detalles/<int:de>/editar/', detalle_update_view, name='detalle-update'),
 	path('vehiculos/<int:id>/atenciones/<int:at>/detalles/<int:de>/eliminar/', detalle_delete_view, name='detalle-delete'),
 	
 ]

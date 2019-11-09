@@ -3,8 +3,9 @@
 {% block content %}
 
 <form method='POST'> {% csrf_token %}
+
 	<p>Dueño: 
-		<select name="id_cliente" required="False" {% if duenyo %} disabled {% endif %}>
+		<select name="id_cliente" required="False">
 			<option value="Null">(Ninguno)</option>
 			{% if duenyo %}
 			<option value="{{ duenyo.id }}" selected="selected">{{ duenyo.nombre }}</option>
@@ -18,23 +19,24 @@
 			{% endif %}
 		</select>
 	</p>
-	<p>Patente: <input type='text' name='patente' placeholder='ABCD12' required=True maxlength="6" style="text-transform: uppercase;" pattern="[A-z]{4}\d{2}|[A-z]{2}\d{4}"></p>
-	<p>VIN: <input type='text' name='vin' required=False maxlength="20"></p>
+	<p>Patente: <input type='text' name='patente' placeholder='ABCD12' required=True maxlength="6" style="text-transform: uppercase;" pattern="[A-z]{4}\d{2}|[A-z]{2}\d{4}" value="{{ obj.patente }}"></p>
+	<p>VIN: <input type='text' name='vin' required=False maxlength="20" value="{{ obj.vin }}"></p>
 	<p>Tipo:
 		<select name='tipo' maxlength="40">
-			<option value="Sedán">Sedán</option>
-			<option value="Hatchback">Hatchback</option>
-			<option value="Station Wagon">Station Wagon</option>
-			<option value="SUV">SUV</option>
-			<option value="Camioneta">Camioneta</option>
-			<option value="Furgón">Furgón</option>
+			<option value="Sedán" {% if obj.tipo == "Sedán" %} selected {% endif %}>Sedán</option>
+			<option value="Hatchback" {% if obj.tipo == "Hatchback" %} selected {% endif %}>Hatchback</option>
+			<option value="Station Wagon" {% if obj.tipo == "Station Wagon" %} selected {% endif %}>Station Wagon</option>
+			<option value="SUV" {% if obj.tipo == "SUV" %} selected {% endif %}>SUV</option>
+			<option value="Camioneta" {% if obj.tipo == "Camioneta" %} selected {% endif %}>Camioneta</option>
+			<option value="Furgón" {% if obj.tipo == "Furgón" %} selected {% endif %}>Furgón</option>
 		</select>
 	</p>
-	<p>Marca: <input type='text' name='marca' required=False maxlength="40"></p>
-	<p>Modelo: <input type='text' name='modelo' required=False maxlength="40"></p>
-	<p>Kilometraje: <input type='number' name='kilometraje' min="0" required=False></p>
-	<p>Año: <input type='number' name='anyo' min="1930" required=False></p>
+	<p>Marca: <input type='text' name='marca' required=False maxlength="40"	value="{{ obj.marca }}"></p>
+	<p>Modelo: <input type='text' name='modelo' required=False maxlength="40" value="{{ obj.modelo }}"></p>
+	<p>Kilometraje: <input type='number' name='kilometraje' min="0" required=False value="{{ obj.kilometraje }}"></p>
+	<p>Año: <input type='number' name='anyo' min="1930" required=False value="{{ obj.anyo }}"></p>
 	<input type='submit' class="btn btn-primary" value='Guardar'/>
 	<input type="button" class="btn btn-secondary" onclick="location.href='../';" value="Cancelar" />
 </form>
+
 {% endblock %}

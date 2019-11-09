@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<h1>Seleccione Cliente</h1>
+	<form action=".">
+		<select name="duenyo">
+			{% for instance in clientes %}
+			<option value="{{ instance.id }}">{{ instance.nombre }}</option>
+			{% endfor %}
+		</select>
+		<input type='submit' class="btn btn-primary" value='Siguiente'/>
+	</form>
+{% endblock %}

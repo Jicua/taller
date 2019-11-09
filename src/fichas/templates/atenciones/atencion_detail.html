@@ -3,31 +3,67 @@
 {% block content %}
 <div class="row">
 	<div class="column">
-		<h2> Atención </h2>
-		<p> <b>Vehículo:</b> {{ object.id_vehiculo.marca }} {{ object.id_vehiculo.modelo }} de {{ object.id_vehiculo.id_cliente }} </p>
-		<p> <b>Fecha de entrada:</b> {{ object.fecha_entrada }} </p>
-		<p> <b>Fecha de salida:</b> {{ object.fecha_salida }} </p>
-		<p> <b>Observaciones:</b> {{ object.observaciones }} </p>
-		<p>
-			{% if user.is_staff %}
-			<input type="button" class="btn btn-success btn-lg" onclick="location.href='./editar/';" value="Editar" />
-			<input type="button" class="btn btn-danger btn-lg" onclick="location.href='./eliminar/';" value="Eliminar" />
-			{% endif %}
-			<input type="button" class="btn btn-secondary btn-lg" onclick="location.href='../../';" value="Volver al vehículo" />
-		</p>
+		<div class="card px-4 mr-4 mb-4">
+			<div class="card-body">
+				<h2>Atención</h2>
+				<p> <b>Número de atención:</b> {{ object.id }} </p>
+				<p> <b>PIN:</b> {{ object.pin }} </p>
+				<p>Entregue esta información al cliente para que pueda revisar el estado de su vehículo</p>
+			</div>
+		</div>
+		<div class="card px-4 mr-4 mb-4">
+			<div class="card-body">
+				<p> <b>Vehículo:</b> {{ object.id_vehiculo.marca }} {{ object.id_vehiculo.modelo }} de {{ object.id_vehiculo.id_cliente }} </p>
+				<p>
+					<b>Estado:</b>
+
+					{% if object.estado %}
+
+					<font color="red">En proceso</font>
+					
+					{% else %}
+
+					<font color="green">Listo</font>
+
+					{% endif %}
+				</p>
+				<p> <b>Resumen:</b> {{ object.observaciones }} </p>
+				<div class="row">
+					<div class="column px-3">
+						<p> <b>Fecha de entrada:</b> {{ object.fecha_entrada }} </p>
+						<p> <b>Hora de entrada:</b> {{ object.hora_entrada }} </p>
+					</div>
+					<div class="column px-3">
+						<p> <b>Fecha de salida:</b>{% if object.fecha_salida %} {{ object.fecha_salida }} {% else %} ----- {% endif %}</p>
+						<p> <b>Hora de salida:</b>{% if object.hora_salida %} {{ object.hora_salida }} {% else %} ----- {% endif %}</p>
+					</div>
+				</div>
+				<p>
+					{% if user.is_staff %}
+					<input type="button" class="btn btn-success btn-lg" onclick="location.href='./editar/';" value="Editar" />
+					<input type="button" class="btn btn-danger btn-lg" onclick="location.href='./eliminar/';" value="Eliminar" />
+					{% endif %}
+					<input type="button" class="btn btn-secondary btn-lg" onclick="location.href='../../';" value="Volver al vehículo" />
+				</p>
+			</div>
+		</div>
 	</div>
 	<div class="column">
-		<h2> Detalles </h2>
-		{% if detalles_list %}
-		{% for instance in detalles_list %}
-		<li>
-			<p><a href='./detalles/{{ instance.id }}'>{{ instance.descripcion }}</a></p>
-		</li>
-		{% endfor %}
-		{% else %}
-		<p>Esta atención no tiene detalles.</p>
-		{% endif %}
-		<p><input type="button" class="btn btn-primary btn-lg" onclick="location.href='./detalles/crear/';" value="Agregar detalle" /></p>
+		<div class="card px-4">
+			<div class="card-body">
+				<h2> Detalles </h2>
+				{% if detalles_list %}
+				{% for instance in detalles_list %}
+				<li>
+					<p><a href='./detalles/{{ instance.id }}'>{{ instance.descripcion }}</a></p>
+				</li>
+				{% endfor %}
+				{% else %}
+				<p>Esta atención no tiene detalles.</p>
+				{% endif %}
+				<p><input type="button" class="btn btn-primary btn-lg" onclick="location.href='./detalles/crear/';" value="Agregar detalle" /></p>
+			</div>
+		</div>
 	</div>
 </div>
 {% endblock %}

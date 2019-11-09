@@ -1,7 +1,10 @@
+import random
 from django.db import models
 from django.urls import reverse
 
 # Create your models here.
+def create_pin():
+	return random.randint(999, 9999)
 
 class Cliente(models.Model):
 	rut			= models.CharField(max_length = 10)
@@ -14,6 +17,11 @@ class Cliente(models.Model):
 	
 	def __str__(self):
 		return self.nombre
+
+	def search(self, query=None):
+		if query is None:
+			return self.get_queryset().none()
+		return self.get_queryset().search()
 
 class Vehiculo(models.Model):
 	id_cliente	= models.ForeignKey('Cliente', blank = True, null = True, on_delete = models.SET_NULL, verbose_name='Dueño')
@@ -36,6 +44,8 @@ class Vehiculo(models.Model):
 	
 class Atencion(models.Model):
 	id_vehiculo		= models.ForeignKey('Vehiculo', on_delete=models.CASCADE, verbose_name='Vehículo')
+	pin				= models.CharField(max_length=4, default=create_pin)
+	estado			= models.BooleanField(default=True)
 	fecha_entrada	= models.DateField()
 	fecha_salida	= models.DateField(blank=True, null=True)
 	hora_entrada	= models.TimeField(blank=True, null=True)

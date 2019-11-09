@@ -3,11 +3,12 @@
 {% block content %}
 
 <form method='POST'> {% csrf_token %}
-	{{ form.as_p }}
-
-	{{ form.media }}
-	<input type='submit' value='Guardar'/>
-	<input type="button" onclick="location.href='../../';" value="Cancelar" />
+	<p><input type="hidden" name="id_atencion" value="{{ atencion.id }}"></p>
+	<p>Descripción:</p> {{ form.descripcion }}
+	<br/>
+	<br/>
+	<input type='submit' class="btn btn-primary btn-lg" value='Guardar'/>
+	<input type="button" class="btn btn-secondary btn-lg" onclick="goBack();" value="Cancelar" />
 </form>
 
 {% endblock %}

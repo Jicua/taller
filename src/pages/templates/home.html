@@ -7,11 +7,29 @@
         height: 400px;  /* The height is 400 pixels */
         width: 50%;  /* The width is the width of the web page */
        }
+
+       .btn-sq-lg {
+		  width: 150px !important;
+		  height: 150px !important;
+		  font-size:22px;
+		}
 </style>
 
 <div class="jumbotron">
-  <h1 class="display-3">Bienvenido al taller mecánico Lüer</h1>
+  <h1 class="display-4">Bienvenido al Servicio Automotriz "Lüer"</h1>
   <p class="lead">Mantención y reparación de su vehículo en Puerto Montt</p>
 </div>
-
+<center>
+  <input type='submit' class="btn btn-primary btn-lg" onclick="location.href='revisar';" value="Revise el estado de su vehículo aquí"></input>
+</center>
+<!--
+{% if user.is_authenticated %}
+<h1>Accesos directos</h1>
+<form action="fichas/atenciones/crear/">
+<input class="btn btn-primary btn-sq-lg" type="submit" value="Registrar
+nueva
+atención" />
+</form>
+{% endif %}
+-->
 {% endblock %}

@@ -18,21 +18,43 @@ from .forms import RawClienteForm, RawVehiculoForm, RawAtencionForm
 def fichas_home_view(request, *args, **kwargs):
 	return render(request, "fichas.html", {})
 
+def cliente_search_view(request):
+	query = request.GET.get('q', None)
+	context = {
+		"query": query
+	}
+	return render(request, "clientes/cliente_search.html", context)
+
 ##########################
 ######## CLIENTE #########
 ##########################
 
+######## RAW #######
+
+# @login_required
+# @staff_member_required
+# def cliente_create_view(request):
+# 	my_form = RawClienteForm(request.POST or None)
+# 	if my_form.is_valid():
+# 		Cliente.objects.create(**my_form.cleaned_data)
+# 		my_form = RawClienteForm()
+# 	context = {
+# 		'form': my_form
+# 	}
+# 	return render(request, "clientes/cliente_create.html", context)
+
 @login_required
 @staff_member_required
 def cliente_create_view(request):
-	my_form = RawClienteForm(request.POST or None)
-	if my_form.is_valid():
-		Cliente.objects.create(**my_form.cleaned_data)
-		my_form = RawClienteForm()
+	form = ClienteForm(request.POST or None)
+	if form.is_valid():
+		form.save()
+		form = ClienteForm()
 	context = {
-		'form': my_form
+		'form': form
 	}
 	return render(request, "clientes/cliente_create.html", context)
+
 
 @login_required
 @staff_member_required
@@ -92,20 +114,44 @@ class ClienteDetailView(DetailView):
 ######## VEHICULO ########
 ##########################
 
+####### RAW #######
+
+# @login_required
+# @staff_member_required
+# def vehiculo_create_view(request, cliente = 0):
+# 	form = RawVehiculoForm(request.POST or None)
+# 	if form.is_valid():
+# 		Vehiculo.objects.create(**form.cleaned_data)
+# 		form = RawVehiculoForm()
+# 	clientes = Cliente.objects.all().order_by('nombre')
+# 	if cliente != 0:
+# 		duenyo = get_object_or_404(Cliente, id=cliente)
+# 		context = {
+# 			'form': form,
+# 			'clientes': clientes,
+# 			'duenyo': duenyo
+# 		}
+# 	else:
+# 		context = {
+# 			'form': form,
+# 			'clientes': clientes,
+# 		}
+# 	return render(request, "vehiculos/vehiculo_create.html", context)
+
 @login_required
 @staff_member_required
 def vehiculo_create_view(request, cliente = 0):
-	form = RawVehiculoForm(request.POST or None)
+	form = VehiculoForm(request.POST or None)
 	if form.is_valid():
-		Vehiculo.objects.create(**form.cleaned_data)
-		form = RawVehiculoForm()
+		form.save()
+		form = VehiculoForm()
 	clientes = Cliente.objects.all().order_by('nombre')
 	if cliente != 0:
 		duenyo = get_object_or_404(Cliente, id=cliente)
 		context = {
 			'form': form,
 			'clientes': clientes,
-			'duenyo': duenyo
+			'duenyo2': duenyo
 		}
 	else:
 		context = {
@@ -118,11 +164,16 @@ def vehiculo_create_view(request, cliente = 0):
 @staff_member_required
 def vehiculo_update_view(request, id=id):
 	obj = get_object_or_404(Vehiculo, id=id)
+	duenyo = get_object_or_404(Cliente, id=obj.id_cliente.id)
+	clientes = Cliente.objects.all().order_by('nombre')
 	form = VehiculoForm(request.POST or None, instance=obj)
 	if form.is_valid():
 		form.save()
 	context = {
-		'form': form
+		'form': form,
+		'obj': obj,
+		'duenyo': duenyo,
+		'clientes': clientes
 	}
 	return render(request, "vehiculos/vehiculo_create.html", context)
 
@@ -160,20 +211,49 @@ def vehiculo_delete_view(request, id):
 ######## ATENCIÓN ########
 ##########################
 
+####### RAW #######
+# @login_required
+# def atencion_create_view(request, id = 0):
+# 	form = RawAtencionForm(request.POST or None)
+# 	if form.is_valid():
+# 		Atencion.objects.create(**form.cleaned_data)
+# 		form = RawAtencionForm()
+# 	auto = get_object_or_404(Vehiculo, id=id)
+# 	context = {
+# 		'form': form,
+# 		'vehiculo': auto
+# 	}
+# 	print(request.POST)
+# 	return render(request, "atenciones/atencion_create.html", context)
+
 @login_required
-@staff_member_required
-def atencion_create_view(request, id):
-	form = RawAtencionForm(request.POST or None)
+def atencion_create_view(request, id = 0):
+	form = AtencionForm(request.POST or None)
 	if form.is_valid():
-		Atencion.objects.create(**form.cleaned_data)
-		form = RawAtencionForm()
-	auto = get_object_or_404(Vehiculo, id=id)
-	context = {
-		'form': form,
-		'vehiculo': auto
-	}
-	print(request.POST)
+		form.save()
+		form = AtencionForm()
+	if id != 0:
+		auto = get_object_or_404(Vehiculo, id=id)
+		context = {
+			'form': form,
+			'vehiculo': auto
+		}
+	else:
+		autos = Vehiculo.objects.all()
+		context = {
+			'form': form,
+			'vehiculos': autos
+		}
 	return render(request, "atenciones/atencion_create.html", context)
+
+def atencion_create_noauto_view(request):
+	clientes = Cliente.objects.all()
+	vehiculos = Vehiculo.objects.all()
+	context = {
+		'clientes': clientes,
+		'vehiculos': vehiculos
+	}
+	return render(request, "atenciones/atencion_create_noauto.html", context)
 
 @login_required
 @staff_member_required
@@ -183,13 +263,14 @@ def atencion_update_view(request, id, at):
 	if form.is_valid():
 		form.save()
 	context = {
-		'form': form
+		'form': form,
+		'obj': obj
 	}
 	return render(request, "atenciones/atencion_create.html", context)
 
 @login_required
 def atencion_list_view(request):
- 	queryset = Atencion.objects.all()
+ 	queryset = Atencion.objects.all().order_by('-fecha_entrada')
  	context = {
  		"object_list": queryset
  	}
@@ -217,17 +298,56 @@ def atencion_delete_view(request, id, at):
 	}
 	return render(request, "atenciones/atencion_delete.html", context)
 
+def revisar_view(request):
+	if request.method == "POST":	
+		numero = request.POST.get("numero")
+		pin = request.POST.get("pin")
+		try:
+			obj = Atencion.objects.get(id=numero)
+		except:
+			context = {
+				"error": "No existe el número de atención"
+			}
+			return render(request, "revisar.html", context)
+		if pin == obj.pin:
+			detalles = Detalle.objects.all().filter(id_atencion=numero)
+			context = {
+				"correcto": True,
+				"object": obj,
+				"detalles_list": detalles
+			}
+			return render(request, "revisar.html", context)
+		else:
+			context = {
+				"error": "PIN incorrecto"
+			}
+			return render(request, "revisar.html", context)
+	else:
+		return render(request, "revisar.html", {})
+
 ##########################
 ######## DETALLE #########
 ##########################
 
 @login_required
-@staff_member_required
 def detalle_create_view(request, id, at):
 	form = DetalleForm(request.POST or None)
 	if form.is_valid():
 		form.save()
 		form = DetalleForm()
+	atencion = get_object_or_404(Atencion, id=at)
+	context = {
+		'form': form,
+		'atencion': atencion
+	}
+	return render(request, "detalles/detalle_create.html", context)
+
+@login_required
+def detalle_update_view(request, id, at, de):
+	obj = get_object_or_404(Detalle, id=de)
+	form = DetalleForm(request.POST or None, instance=obj)
+	if form.is_valid():
+		form.save()
 	context = {
 		'form': form
 	}

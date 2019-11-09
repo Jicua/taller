@@ -2,6 +2,7 @@
 
 {% block content %}
 <form method='POST'> {% csrf_token %}
+	<!-- RAW
 	<div class="form-group">
 		<p>Rut: <input type='text' name='rut' placeholder='Ingrese rut' required=True maxlength="10"></p>
 		<p>Nombre: <input type='text' name='nombre' placeholder='Ingrese nombre' required=True maxlength="100"></p>
@@ -9,6 +10,10 @@
 		<p>E-mail: <input type='text' name='email' placeholder='Ingrese e-mail' required=True maxlength="100"></p>
 	</div>
 	<input type='submit' class="btn btn-primary" onclick="location.href='../';" value='Guardar'/>
+	<input type="button" class="btn btn-secondary" onclick="location.href='../';" value="Cancelar" />
+	-->
+	{{ form.as_p }}
+	<input type='submit' class="btn btn-primary" value='Guardar'/>
 	<input type="button" class="btn btn-secondary" onclick="location.href='../';" value="Cancelar" />
 </form>
 {% endblock %}
