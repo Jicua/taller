@@ -64,6 +64,7 @@ class Vehiculo(models.Model):
 	modelo		= models.CharField(max_length = 40)
 	kilometraje	= models.PositiveIntegerField()
 	anyo		= models.PositiveIntegerField(null = True)
+	imagen		= models.ImageField(upload_to='vehiculos/', blank=True, null=True)
 
 	objects		= VehiculoManager()
 
@@ -106,26 +107,19 @@ class Atencion(models.Model):
 	fecha_salida	= models.DateField(blank=True, null=True)
 	hora_entrada	= models.TimeField(blank=True, null=True)
 	hora_salida		= models.TimeField(blank=True, null=True)
-	observaciones	= models.CharField(max_length=500)
+	observaciones	= models.CharField(max_length=512)
 
 	objects			= AtencionManager()
 
 	def get_absolute_url(self):
-		return reverse("fichas:atencion-detail", kwargs={"id": self.id_vehiculo, "at": self.id})
+		return reverse("fichas:atencion-detail", kwargs={"id": self.id_vehiculo.id, "at": self.id})
 
-	#def get_relative_url(self):
-	#	return reverse("fichas:vehiculo-atencion-detail", kwargs={"at": self.id})
-	
 class Detalle(models.Model):
-	id_atencion	= models.ForeignKey('Atencion', on_delete=models.CASCADE, verbose_name='Atención')
-	descripcion	= models.TextField(blank=True)
-	image 		= models.ImageField(upload_to='image/', blank=True, null=True)
+	id_atencion		= models.ForeignKey('Atencion', on_delete=models.CASCADE, verbose_name='Atención')
+	descripcion		= models.TextField(blank=True)
+	image 			= models.ImageField(upload_to='image/', blank=True, null=True)
+	repuesto		= models.CharField(max_length=256, blank=True, null=True)
+	valor_repuesto	= models.PositiveIntegerField(blank=True, null=True)
 
-class Imagen(models.Model):
-	id_detalle	= models.ForeignKey('Detalle', on_delete=models.CASCADE, verbose_name='Detalle')
-	ubicacion	= models.CharField(max_length=255, blank=True, null=True) # file path relativo
-	descripcion	= models.TextField(blank=True)
-	imagen 		= models.ImageField(upload_to='image/', blank=True, null=True)
-
-class SearchQuery(models.Model):
-	query = models.CharField(max_length=128)
+	def get_absolute_url(self):
+		return reverse("fichas:detalle-detail", kwargs={"id": self.id_atencion.id_vehiculo.id, "at": self.id_atencion.id, "de": self.id})

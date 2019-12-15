@@ -49,7 +49,7 @@
 		</div>
 	</div>
 	<div class="column">
-		<div class="card px-4">
+		<div class="card px-4 mb-4">
 			<div class="card-body">
 				<h2> Detalles </h2>
 				{% if detalles_list %}
@@ -62,6 +62,25 @@
 				<p>Esta atención no tiene detalles.</p>
 				{% endif %}
 				<p><input type="button" class="btn btn-primary btn-lg" onclick="location.href='./detalles/crear/';" value="Agregar detalle" /></p>
+			</div>
+		</div>
+		<div class="card px-4">
+			<div class="card-body">
+				<h2>Resumen</h2>
+				<table>
+					<tr>
+						<td class="pr-4"><b>Valor de los repuestos:</b></td>
+						<td>${{ valor_repuestos }}</td>
+					</tr>
+					<tr>
+						<td><b>IVA:</b></td>
+						<td>${{ iva }}</td>
+					</tr>
+					<tr>
+						<td><b>Total:</b></td>
+						<td>${{ total }}</td>
+					</tr>
+				</table>
 			</div>
 		</div>
 	</div>

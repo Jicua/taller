@@ -3,31 +3,41 @@
 {% block content %}
 
 <h2> Detalle de atención</h2>
-<div class="row">
+<div class="row mb-4">
 	<div class="column">
-		<div class="card px-4 mr-4 mb-4">
+		<div class="card mr-4 mb-4">
 			<div class="card-body">
-				<p> Descripción: </p>
-				<p> {{ object.descripcion }} </p>
+				<table>
+					<tr>
+						<td class="pr-4"><b>Descripción:</b></td>
+						<td>{{ object.descripcion }}</td>
+					</tr>
+					{% if object.repuesto %}
+					<tr>
+						<td><b>Repuesto:</b></td>
+						<td>{{ object.repuesto }}</td>
+					</tr>
+					{% if object.valor_repuesto %}
+					<tr>
+						<td><b>Valor:</b></td>
+						<td>${{ object.valor_repuesto }}</td>
+					</tr>
+					{% endif %}
+					{% endif %}
+				</table>
 			</div>
 		</div>
 	</div>
 	{% if object.image %}
 	<div class="column">
-		<div class="card px-4 mr-4 mb-4">
-			<div class="card-body">
-				<a href="{{ object.image.url }}"> <img src="{{ object.image.url }}" width="500" height="400" class="card-img-top"/></a>
-			</div>
-		</div>
+		<a href="{{ object.image.url }}"> <img src="{{ object.image.url }}" width="640" height="480" class="img-fluid img-thumbnail"/></a>
 	</div>
 	{% endif %}
 </div>
 
-	{% if user.is_staff %}
-<p>
+{% if user.is_staff %}
 	<input type="button" class="btn btn-success btn-lg" onclick="location.href='./editar/';" value="Editar" />
 	<input type="button" class="btn btn-danger btn-lg" onclick="location.href='./eliminar/';" value="Eliminar" />
-	{% endif %}
+{% endif %}
 	<input type="button" class="btn btn-secondary btn-lg" onclick="location.href='../../';" value="Volver a atención" />
-</p>
 {% endblock %}

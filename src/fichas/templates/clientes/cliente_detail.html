@@ -6,16 +6,25 @@
 		<div class="card mb-4">
 			<div class="card-body">
 				<h2> {{ object.nombre }} </h2>
-				<p> <b>Rut:</b> {{ object.rut }} </p>
-				<p> <b>Teléfono:</b> {{ object.telefono }} </p>
-				<p> <b>Email:</b> {{ object.email }} </p>
-				<p>
-					{% if user.is_staff %}
-					<input type="button" class="btn btn-success btn-lg" onclick="location.href='./editar/';" value="Editar" />
-					<input type="button" class="btn btn-danger btn-lg" onclick="location.href='./eliminar/';" value="Eliminar" />
-					{% endif %}
-					<input type="button" class="btn btn-secondary btn-lg" onclick="location.href='../';" value="Volver a la lista" />
-				</p>
+				<table class="mb-4">
+					<tr>
+						<td><b>Rut:</b></td>
+						<td>{{ object.rut }}</td>
+					</tr>
+					<tr>
+						<td class="pr-4"><b>Teléfono:</b></td>
+						<td>{{ object.telefono }}</td>
+					</tr>
+					<tr>
+						<td><b>Email:</b></td>
+						<td>{{ object.email }}</td>
+					</tr>
+				</table>
+				{% if user.is_staff %}
+				<input type="button" class="btn btn-success btn-lg" onclick="location.href='./editar/';" value="Editar" />
+				<input type="button" class="btn btn-danger btn-lg" onclick="location.href='./eliminar/';" value="Eliminar" />
+				{% endif %}
+				<input type="button" class="btn btn-secondary btn-lg" onclick="location.href='../';" value="Volver a la lista" />
 			</div>
 		</div>
 	</div>
@@ -24,23 +33,30 @@
 			<div class="card-body">
 				<h2>Vehículos</h2>
 				{% if vehiculos_list %}
-				<ul>
-				{% for instance in vehiculos_list %}
-					<li>
-						<a href='{{ instance.get_absolute_url }}'>{{ instance.marca }} {{ instance.modelo }}</a>
-					</li>
+				<div class="row">
+					{% for instance in vehiculos_list %}
+					<a href='{{ instance.get_absolute_url }}' style="text-decoration: none">
+						<div class="card mx-2 mb-4">
+							{% if instance.imagen %}
+							<img src="{{ instance.imagen.url }}" class="card-img-top" style="height:120px"/>
+							{% endif %}
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item">{{ instance.marca }} {{ instance.modelo }}</li>
+		    					<li class="list-group-item"> {{ instance.patente }}</li>
+	  						</ul>
+						</div>
+					</a>
 				{% endfor %}
-				</ul>
-			{% else %}
-				<p>Este cliente no tiene vehículos.</p>
-			{% endif %}
-			<p>
-			{% if user.is_staff %}
-			<form action="../../vehiculos/crear/{{ object.id }}">
-				<input class="btn btn-primary btn-lg" type=submit value="Agregar Vehículo" />
-			</form>
-			{% endif %}
-			</p>
+				</div>		
+				{% else %}
+					<p>Este cliente no tiene vehículos.</p>
+				{% endif %}
+				{% if user.is_staff %}
+				<form action="../../vehiculos/crear/{{ object.id }}">
+					<input class="btn btn-primary btn-lg" type=submit value="Agregar Vehículo" />
+				</form>
+				{% endif %}
+			</div>
 			</div>
 		</div>
 	</div>

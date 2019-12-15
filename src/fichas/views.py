@@ -7,9 +7,9 @@ from django.views.generic import (
 	DetailView
 	)
 
-from .models import Cliente, Vehiculo, Atencion, Detalle, Imagen
+from .models import Cliente, Vehiculo, Atencion, Detalle
 
-from .forms import ClienteForm, VehiculoForm, AtencionForm, DetalleForm, ImagenForm
+from .forms import ClienteForm, VehiculoForm, AtencionForm, DetalleForm
 from .forms import RawClienteForm, RawVehiculoForm, RawAtencionForm
 
 # Create your views here.
@@ -55,6 +55,7 @@ def cliente_create_view(request):
 	if form.is_valid():
 		form.save()
 		form = ClienteForm()
+		return redirect('../')
 	context = {
 		'form': form
 	}
@@ -68,6 +69,7 @@ def cliente_update_view(request, id=id):
 	form = ClienteForm(request.POST or None, instance=obj)
 	if form.is_valid():
 		form.save()
+		return redirect('../')
 	context = {
 		'form': form
 	}
@@ -158,10 +160,11 @@ def vehiculo_search_view(request):
 @login_required
 @staff_member_required
 def vehiculo_create_view(request, cliente = 0):
-	form = VehiculoForm(request.POST or None)
+	form = VehiculoForm(request.POST or None, request.FILES or None)
 	if form.is_valid():
 		form.save()
 		form = VehiculoForm()
+		return redirect('../')
 	clientes = Cliente.objects.all().order_by('nombre')
 	if cliente != 0:
 		duenyo = get_object_or_404(Cliente, id=cliente)
@@ -183,9 +186,10 @@ def vehiculo_update_view(request, id=id):
 	obj = get_object_or_404(Vehiculo, id=id)
 	duenyo = get_object_or_404(Cliente, id=obj.id_cliente.id)
 	clientes = Cliente.objects.all().order_by('nombre')
-	form = VehiculoForm(request.POST or None, instance=obj)
+	form = VehiculoForm(request.POST or None, request.FILES or None, instance=obj)
 	if form.is_valid():
 		form.save()
+		return redirect('../')
 	context = {
 		'form': form,
 		'obj': obj,
@@ -261,6 +265,7 @@ def atencion_create_view(request, id = 0):
 	if form.is_valid():
 		form.save()
 		form = AtencionForm()
+		return redirect('../')
 	if id != 0:
 		auto = get_object_or_404(Vehiculo, id=id)
 		context = {
@@ -289,11 +294,14 @@ def atencion_create_noauto_view(request):
 def atencion_update_view(request, id, at):
 	obj = get_object_or_404(Atencion, id=at)
 	form = AtencionForm(request.POST or None, instance=obj)
+	vehiculo = obj.id_vehiculo
 	if form.is_valid():
 		form.save()
+		return redirect('../')
 	context = {
 		'form': form,
-		'obj': obj
+		'obj': obj,
+		'vehiculo': vehiculo
 	}
 	return render(request, "atenciones/atencion_create.html", context)
 
@@ -309,9 +317,17 @@ def atencion_list_view(request):
 def atencion_detail_view(request, id, at):
 	obj = get_object_or_404(Atencion, id=at)
 	detalles = Detalle.objects.all().filter(id_atencion=at)
+	valor_repuestos = 0
+	for detalle in detalles:
+		if detalle.valor_repuesto:
+			valor_repuestos += detalle.valor_repuesto
+	iva = round(valor_repuestos*0.19)
 	context = {
 		"object": obj,
-		"detalles_list": detalles
+		"detalles_list": detalles,
+		"valor_repuestos": valor_repuestos,
+		"iva": iva,
+		"total": valor_repuestos + iva
 	}
 	return render(request, "atenciones/atencion_detail.html", context)
 
@@ -340,10 +356,18 @@ def revisar_view(request):
 			return render(request, "revisar.html", context)
 		if pin == obj.pin:
 			detalles = Detalle.objects.all().filter(id_atencion=numero)
+			valor_repuestos = 0
+			for detalle in detalles:
+				if detalle.valor_repuesto:
+					valor_repuestos += detalle.valor_repuesto
+			iva = round(valor_repuestos*0.19)
 			context = {
 				"correcto": True,
 				"object": obj,
-				"detalles_list": detalles
+				"detalles_list": detalles,
+				"valor_repuestos": valor_repuestos,
+				"iva": iva,
+				"total": valor_repuestos + iva
 			}
 			return render(request, "revisar.html", context)
 		else:
@@ -364,21 +388,27 @@ def detalle_create_view(request, id, at):
 	if form.is_valid():
 		form.save()
 		form = DetalleForm()
+		return redirect('../')
 	atencion = get_object_or_404(Atencion, id=at)
 	context = {
 		'form': form,
-		'atencion': atencion
+		'atencion': atencion,
+		'back': atencion.get_absolute_url()
 	}
 	return render(request, "detalles/detalle_create.html", context)
 
 @login_required
 def detalle_update_view(request, id, at, de):
 	obj = get_object_or_404(Detalle, id=de)
-	form = DetalleForm(request.POST or None, instance=obj)
+	form = DetalleForm(request.POST or None, request.FILES or None, instance=obj)
 	if form.is_valid():
 		form.save()
+		return redirect('../')
+	atencion = get_object_or_404(Atencion, id=at)
 	context = {
-		'form': form
+		'form': form,
+		'atencion': atencion,
+		'back': obj.get_absolute_url()
 	}
 	return render(request, "detalles/detalle_create.html", context)
 
@@ -401,7 +431,3 @@ def detalle_delete_view(request, id, at, de):
 		"object": obj
 	}
 	return render(request, "detalles/detalle_delete.html", context)
-
-##########################
-######## IMAGEN ##########
-##########################

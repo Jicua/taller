@@ -1,6 +1,6 @@
 import re
 from django import forms
-from .models import Cliente, Vehiculo, Atencion, Detalle, Imagen
+from .models import Cliente, Vehiculo, Atencion, Detalle
 
 class ClienteForm(forms.ModelForm):
 	rut			= forms.CharField(max_length=10, widget=forms.TextInput(attrs={"placeholder": "Ingrese rut"}))
@@ -46,13 +46,12 @@ class ClienteForm(forms.ModelForm):
 
 	def clean_email(self, *args, **kwargs):
 		email = self.cleaned_data.get("email")
+		email = email.lower()
 		valid = re.compile('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$')
 		if valid.match(email) == None:
 			raise forms.ValidationError("E-mail inválido")
 		else:
 			return email
-
-
 
 class RawClienteForm(forms.Form):
 	rut			= forms.CharField(max_length=10)
@@ -72,7 +71,8 @@ class VehiculoForm(forms.ModelForm):
 			'marca',
 			'modelo',
 			'kilometraje',
-			'anyo'
+			'anyo',
+			'imagen'
 		]
 
 	def clean_patente(self, *args, **kwargs):
@@ -83,6 +83,22 @@ class VehiculoForm(forms.ModelForm):
 			raise forms.ValidationError("Patente inválida")
 		else:
 			return patente
+
+	def clean_vin(self, *args, **kwargs):
+		vin = self.cleaned_data.get("vin")
+		valid = re.compile('\d{20}')
+		if valid.match(vin) == None:
+			raise forms.ValidationError("Vin inválido")
+		else:
+			return vin
+
+	def clean_tipo(self, *args, **kwargs):
+		tipo = self.cleaned_data.get("tipo")
+		validos = ("Sedán", "Hatchback", "Station Wagon", "SUV", "Camioneta", "Furgón")
+		if tipo in validos:
+			return tipo
+		else:
+			raise forms.ValidationError("Tipo inválido")
 
 class RawVehiculoForm(forms.Form):
 	#self.fields['id_cliente'].queryset	= Cliente.objects.filter(cliente=self.id_cliente)
@@ -103,10 +119,12 @@ class AtencionForm(forms.ModelForm):
 	hora_salida		= forms.TimeField(required=False)
 	observaciones	= forms.CharField()
 	widgets = {'id_vehiculo': forms.HiddenInput()}
+
 	class Meta:
 		model = Atencion
 		fields = [
 			'id_vehiculo',
+			'estado',
 			'fecha_entrada',
 			'fecha_salida',
 			'hora_entrada',
@@ -114,6 +132,10 @@ class AtencionForm(forms.ModelForm):
 			'observaciones'
 		]
 		
+	def clean_observaciones(self, *args, **kwargs):
+		observaciones = self.cleaned_data.get("observaciones")
+		observaciones = observaciones.capitalize()
+		return observaciones
 
 class RawAtencionForm(forms.Form):
 	id_vehiculo		= forms.ModelChoiceField(queryset=Vehiculo.objects.all())
@@ -124,21 +146,25 @@ class RawAtencionForm(forms.Form):
 	observaciones	= forms.CharField()
 
 class DetalleForm(forms.ModelForm):
-	descripcion = forms.CharField(label='aaa', widget=forms.Textarea(attrs={"placeholder": "Ingrese descripción"}))
+	descripcion = forms.CharField(widget=forms.Textarea(attrs={"placeholder": "Ingrese descripción"}))
+	repuesto 	= forms.CharField(widget=forms.TextInput(attrs={"placeholder": "Ingrese repuesto"}))
 
 	class Meta:
 		model = Detalle
 		fields = [
 			'id_atencion',
 			'descripcion',
-			'image'
+			'image',
+			'repuesto',
+			'valor_repuesto'
 		]
 
-class ImagenForm(forms.ModelForm):
-	class Meta:
-		model = Imagen
-		fields = [
-			'id_detalle',
-			'ubicacion',
-			'descripcion'
-		]
+	def clean_descripcion(self, *args, **kwargs):
+		descripcion = self.cleaned_data.get("descripcion")
+		descripcion = descripcion.capitalize()
+		return descripcion
+
+	def clean_repuesto(self, *args, **kwargs):
+		repuesto = self.cleaned_data.get("repuesto")
+		repuesto = repuesto.capitalize()
+		return repuesto

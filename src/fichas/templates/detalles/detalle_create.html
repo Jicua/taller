@@ -6,15 +6,26 @@
 	<div class="row">
 		<div class="column px-4">
 			<input type="hidden" name="id_atencion" value="{{ atencion.id }}">
-			<p>Descripción:</p> {{ form.descripcion }}
+			<p><b>Descripción:</b></p>
+			{{ form.descripcion }}
+			<table class="mt-2">
+				<tr>
+					<td class="pb-2"><b>Repuesto:</b></td>
+					<td class="pb-2">{{ form.repuesto }}</td>
+				</tr>
+				<tr>
+					<td class="pb-2"><b>Valor repuesto:</b></td>
+					<td class="pb-2">{{ form.valor_repuesto }}</td>
+				</tr>
+			</table>
 		</div>
 		<div class="column px-4">
 			<p>Agregar una imágen:</p> {{ form.image }}
 		</div>
 	</div>
 	<br/>
-		<input type='submit' class="btn btn-primary btn-lg" value='Guardar'/>
-		<input type="button" class="btn btn-secondary btn-lg" onclick="goBack();" value="Cancelar" />
+		<input type='submit' class="btn btn-success btn-lg" value='Guardar'/>
+		<input type="button" class="btn btn-secondary btn-lg" onclick="location.href='{{ back }}'" value="Cancelar" />
 
 </form>
 

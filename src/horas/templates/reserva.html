@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% if not post %}
+<h1>Reserve su hora para el día</h1>
+<h1 class="mb-4"><b>{{ diaSemana }}</b> a las <b>{{ hora }}</b> horas</h1>
+<form method='POST'> {% csrf_token %}
+	<input type='hidden' name="fecha" value="{{ fecha }}">
+	<input type='hidden' name="dia" value="{{ dia }}">
+	<input type='hidden' name="bloque" value="{{ bloque }}">
+	<input type='hidden' name="mes" value="{{ mes }}">
+	<input type='hidden' name="anyo" value="{{ anyo }}">
+	<div class="row">
+		<div class="column px-4">
+			<table class="mb-2">
+				<tr>
+					<td class="pb-2"><b>Nombre:</b></td>
+					<td class="pb-2">{{ form.nombre }}</td>
+				</tr>
+				<tr>
+					<td class="pb-2"><b>Teléfono:</b></td>
+					<td class="pb-2">{{ form.telefono }}</td>
+				</tr>
+				<tr>
+					<td class="pb-2 pr-4"><b>Email:</b> (opcional)</td>
+					<td class="pb-2">{{ form.email }}</td>
+				</tr>
+			</table>
+		</div>
+		<div class="column px-4">
+			<p><b>Observaciones:</b> (opcional)</p>	
+			{{ form.observaciones }}
+		</div>
+	</div>
+	<input type='hidden' name="hora" value="{{ hora }}">
+	<input type='hidden' name="diaSemana" value="{{ diaSemana }}">
+	<input type='submit' class="btn btn-success btn-lg mb-4" value='Reservar'/>
+	<input type="button" class="btn btn-secondary btn-lg mb-4" onclick="goBack()" value="Cancelar" />
+</form>
+{% endif %}
+{% if post %}
+{% if not error %}
+<h1>Reserva exitosa</h1>
+<h2>Estimado {{ nombre }}, su hora para el <b>{{ diaSemana }}</b> a las <b>{{ hora }}</b> se ha reservado con éxito.</h2>
+{% endif %}
+{% endif %}
+{% if post %}
+{% if error %}
+<h1>Ha ocurrido un problema con su reserva</h1>
+<h1>Presione aquí para volver a la toma de horas</h1>
+{% endif %}
+{% endif %}
+{% endblock %}

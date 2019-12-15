@@ -5,10 +5,21 @@
 <div class="col d-flex justify-content-center">
 	<div class="card mb-4">
 		<div class="card-body">
-			<h2>Iniciar sesión</h2>
-			<form method="post">
-				{% csrf_token %}
+			<h2 class="mb-4">Iniciar sesión</h2>
+			<form method="post"> {% csrf_token %}
 				{{ form.as_p }}
+				<!--
+				<table class="mb-4">
+					<tr>
+						<td class="pr-2 pb-2"><b>Usuario:</b></td>
+						<td class="pb-2">{{ form.username }}</td>
+					</tr>
+					<tr>
+						<td><b>Clave:</b></td>
+						<td>{{ form.password }}</td>
+					</tr>
+			 	</table>
+			 -->
 			 	<button type="submit" class="btn btn-success btn-lg">Entrar</button> <button style="margin-left: 20px" class="btn btn-secondary btn-lg" onclick="location.href='../../';">Volver</button>
 			</form>
 		</div>

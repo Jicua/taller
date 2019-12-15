@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h1 class="mb-4">Horas reservadas para esta semana</h1>
+{% for hora in horas %}
+<div class="card mb-4">
+	<div class="card-body">
+		<h5 class="card-title"><b>{{ hora.fecha|date:"l" }} {{ hora.dia }} de {{ hora.fecha|date:"F" }}</b></h5>
+		<p class="card-text"><b>Hora:
+			{% if hora.bloque == 1 %}
+			9:00
+			{% endif %}
+			{% if hora.bloque == 2 %}
+			11:00
+			{% endif %}
+			{% if hora.bloque == 3 %}
+			15:00
+			{% endif %}
+			{% if hora.bloque == 4 %}
+			17:00
+			{% endif %}
+			</b>
+		</p>
+		<p class="card-text">Cliente: {{ hora.nombre }}</p>
+		<p class="card-text">Teléfono: {{ hora.telefono }}</p>
+		{% if hora.email %}
+		<p class="card-text">Email: {{ hora.email }}</p>
+		{% endif %}
+		{% if hora.observaciones %}
+		<p class="card-text">Observaciones: {{ hora.observaciones }}</p>
+		{% endif %}
+	</div>
+</div>
+{% endfor %}
+{% endblock %}

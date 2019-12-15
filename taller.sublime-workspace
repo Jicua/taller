@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"bloques_tom",
+				"bloques_tomados_dia2"
+			],
+			[
+				"blo",
+				"bloques_tomados"
+			],
+			[
+				"reser",
+				"reserva_view"
+			],
+			[
+				"list-gro",
+				"list-group-item"
+			],
+			[
 				"revi",
 				"revisar_view"
 			],
@@ -44,82 +60,19 @@
 	"buffers":
 	[
 		{
-			"file": "src/fichas/templates/atenciones/atencion_create.html",
+			"file": "src/fichas/templates/fichas.html",
 			"settings":
 			{
-				"buffer_size": 1472,
+				"buffer_size": 1430,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/templates/base.html",
+			"file": "src/pages/templates/home.html",
 			"settings":
 			{
-				"buffer_size": 1364,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/fichas/templates/detalles/detalle_delete.html",
-			"settings":
-			{
-				"buffer_size": 379,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/fichas/templates/atenciones/atencion_delete.html",
-			"settings":
-			{
-				"buffer_size": 411,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/fichas/templates/atenciones/atencion_detail.html",
-			"settings":
-			{
-				"buffer_size": 2294,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/pages/templates/revisar.html",
-			"settings":
-			{
-				"buffer_size": 2150,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/fichas/templates/detalles/detalle_create.html",
-			"settings":
-			{
-				"buffer_size": 408,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/fichas/templates/vehiculos/vehiculo_create.html",
-			"settings":
-			{
-				"buffer_size": 2125,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/fichas/views.py",
-			"settings":
-			{
-				"buffer_size": 9716,
+				"buffer_size": 1309,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -165,10 +118,11 @@
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/clientes",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/detalles",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/vehiculos",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/horas",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/horas/templates",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/pages",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/pages/static",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/pages/static/pages",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/pages/static/pages/images",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/pages/templates",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/taller",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/templates",
@@ -176,42 +130,57 @@
 	],
 	"file_history":
 	[
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/atenciones/atencion_detail.html",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/vehiculos/vehiculo_create.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/templates/navbar.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/pages/templates/revisar.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/clientes/cliente_create.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/models.py",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/atenciones/atencion_create.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/atenciones/atencion_list.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/pages/templates/contact.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/vehiculos/vehiculo_detail.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/templates/registration/login.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/login.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/urls.py",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/pages/urls.py",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/views.py",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/clientes/cliente_detail.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/atenciones/atencion_revisar.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/taller/settings.py",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/clientes/cliente_list.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/atenciones/atencion_revisar_error.html",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/forms.py",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/pages/templates/home.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/pages/views.py",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/horas/forms.py",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/models.py",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/views.py",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/detalles/detalle_create.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/atenciones/atencion_create_noauto.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/clientes/cliente_search.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/vehiculos/vehiculo_list.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/atenciones/atencion_create.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/horas/models.py",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/horas/views.py",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/pages/templates/home.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/horas/templates/horas_admin.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/horas/templates/reserva.html",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/fichas.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/horas/templates/horas.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/taller/settings.py",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/horas/urls.py",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/horas/templates/confirma.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/pages/templates/revisar.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/templates/navbar.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/clientes/cliente_create.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/vehiculos/vehiculo_detail.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/taller/urls.py",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/pages/urls.py",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/admin.py",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/horas/admin.py",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/pages/views.py",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/vehiculos/vehiculo_list.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/templates/registration/login.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/urls.py",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/detalles/detalle_detail.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/atenciones/atencion_detail.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/Lib/site-packages/django/contrib/auth/forms.py",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/clientes/cliente_detail.html",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/templates/base.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/pages/templates/contact.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/atenciones/atencion_list.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/clientes/cliente_list.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/clientes/cliente_search.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/vehiculos/vehiculo_search.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/atenciones/atencion_search.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/staticfiles/blank.txt",
+		"/C/Users/Javier/GitHub/seminariodegrado/static_cdn_test/blank/blank.txt",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/atenciones/atencion_delete.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/detalles/detalle_delete.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/login.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/atenciones/atencion_revisar.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/atenciones/atencion_revisar_error.html",
+		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/atenciones/atencion_create_noauto.html",
 		"/C/Users/Javier/GitHub/seminariodegrado/Lib/site-packages/django/template/defaulttags.py",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/clientes/cliente_delete.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/atenciones/atencion_delete.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/detalles/detalle_detail.html",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/vehiculos/vehiculo_delete.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/detalles/detalle_delete.html",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/taller/urls.py",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/registration/login.html",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/templates/fichas/base.html",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/pages/templates/base.html",
@@ -236,7 +205,6 @@
 		"/C/Users/Javier/GitHub/seminariodegrado/src/templates/home.html",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/templates/contact.html",
 		"/C/Users/Javier/GitHub/seminariodegrado/src/instrucciones.md",
-		"/C/Users/Javier/GitHub/seminariodegrado/src/fichas/admin.py",
 		"/C/Users/Javier/GitHub/seminariodegrado/README.md",
 		"/C/Users/Javier/Dev/DjangoYT2/src/blog/forms.py",
 		"/C/Users/Javier/Dev/DjangoYT2/src/products/urls.py",
@@ -278,6 +246,7 @@
 		"height": 104.0,
 		"where_history":
 		[
+			""
 		]
 	},
 	"find_state":
@@ -285,6 +254,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"EN",
+			"widget",
+			"bloques_tomados_dia3",
+			"hora",
+			"authentication",
+			"label",
 			"observaciones",
 			">\n",
 			"lg",
@@ -326,115 +301,31 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/fichas/templates/atenciones/atencion_create.html",
+					"file": "src/fichas/templates/fichas.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1472,
+						"buffer_size": 1430,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1457,
-								1457
+								115,
+								76
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 179.2,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "src/templates/base.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1364,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1347,
-								1347
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/fichas/templates/detalles/detalle_delete.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 379,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								329,
-								329
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "src/fichas/templates/atenciones/atencion_delete.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 411,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								327,
-								359
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -444,147 +335,33 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "src/fichas/templates/atenciones/atencion_detail.html",
+					"buffer": 1,
+					"file": "src/pages/templates/home.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2294,
+						"buffer_size": 1309,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1048,
-								1048
+								394,
+								394
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 108.0,
+						"translation.y": 162.4,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "src/pages/templates/revisar.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2150,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								413,
-								413
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "src/fichas/templates/detalles/detalle_create.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 408,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								362,
-								362
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "src/fichas/templates/vehiculos/vehiculo_create.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2125,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1934,
-								1934
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 208.8,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "src/fichas/views.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 9716,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6856,
-								6856
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 4324.8,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -667,7 +444,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 289.0,
+	"side_bar_width": 267.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

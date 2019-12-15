@@ -8,9 +8,7 @@
 {% endif %}
 <form method='POST'> {% csrf_token %}
 	{% if vehiculo %}
-	<p><input type="hidden" name="id_vehiculo" value="{{ vehiculo.id }}"></p>
-	{% else %}
-
+	<input type="hidden" name="id_vehiculo" value="{{ vehiculo.id }}">
 	{% endif %}
 	<div class="row">
 		<div class="col">
@@ -27,7 +25,7 @@
 	<p>Estado:</p>
 	<p><input type="radio" name="estado" value="True" {% if obj.estado == True %} checked {% endif %}><font color="red"> En proceso</font></p>
 	<p><input type="radio" name="estado" value="False" {% if obj.estado == False %} checked {% endif %}><font color="green"> Listo</p>
-	<input type='submit' class="btn btn-primary btn-lg" value='Guardar'/>
+	<input type='submit' class="btn btn-success btn-lg" value='Guardar'/>
 	<input type="button" class="btn btn-secondary btn-lg" onclick="goBack()" value="Cancelar" />
 </form>
 {% endblock %}

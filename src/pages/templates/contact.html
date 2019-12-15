@@ -1,29 +1,29 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<div class="container">
-	<div class="row">
-		<div class="card text-center px-5 mr-4">
-			<div class="card-body">
-      			<div class="col">
-					<h1>Contacto</h1>
-					<p>Ricardo Lüer</p>
-					<p>+56 9 90448854</p>
-					<p>ricardo@luer.cl</p>
-				</div>
+<div class="row">
+	<div class="column">
+		<div class="card text-center px-4 mr-4 mb-4">
+			<div class="card-body">	
+				<h1>Contacto</h1>
+				<br/>
+				<p>Ricardo Lüer</p>
+				<p>+56 9 90448854</p>
+				<p>ricardo@luer.cl</p>
 			</div>
 		</div>
+	</div>
+	<div class="column">
 		<div class="card w-60 text-center">
 			<div class="card-body">
-      			<div class="col">
-					<h1>Dónde estamos</h1>
-					<p>Calle Ochagavía 646, Puerto Montt</p>
-					<a href="{% static 'pages/images/map.png' %}" ><img src="{% static 'pages/images/map.png' %}" class="img-fluid img-thumbnail" width="80%"></a>
-				</div>
+				<h1>Dónde estamos</h1>
+				<p>Calle Ochagavía 646, Puerto Montt</p>
+				<a href="{% static 'pages/images/map.png' %}" ><img src="{% static 'pages/images/map.png' %}" class="img-fluid img-thumbnail" width="80%"></a>
 			</div>
 		</div>
 	</div>
 </div>
+
 <!--
 <div id="map"></div>
 	<script>

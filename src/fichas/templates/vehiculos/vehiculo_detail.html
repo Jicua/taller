@@ -6,23 +6,43 @@
 		<div class="card px-4 mb-4">
 			<div class="card-body">
 				<h2> Vehículo </h2>
-				<p> <b>Dueño:</b> <a href = '{{ object.id_cliente.get_absolute_url }}' > {{ object.id_cliente.nombre }} </a> </p>
-				<p> <b>Patente:</b> {{ object.patente }} </p>
-				<p> <b>Tipo:</b> {{ object.tipo }} </p>
-				<p> <b>Marca:</b> {{ object.marca }} </p>
-				<p> <b>Modelo:</b> {{ object.modelo }} </p>
-				<p> <b>Kilometraje:</b> {{ object.kilometraje }} </p>
-				<p>
+				<table class="mb-4">
+					<tr>
+						<td><b>Dueño:</b></td>
+						<td><a href = '{{ object.id_cliente.get_absolute_url }}' > {{ object.id_cliente.nombre }} </a></td>
+					</tr>
+					<tr>
+						<td><b>Patente:</b></td>
+						<td>{{ object.patente }}</td>
+					</tr>
+					<tr>
+						<td><b>Vin:</b></td>
+						<td>{{ object.vin }}</td>
+					</tr>
+					<tr>
+						<td><b>Tipo:</b></td>
+						<td>{{ object.tipo }}</td>
+					</tr>
+					<tr>
+						<td><b>Marca:</b></td>
+						<td>{{ object.marca }}</td>
+					</tr>
+					<tr>
+						<td><b>Modelo:</b></td>
+						<td>{{ object.modelo }}</td>
+					</tr>
+					<tr>
+						<td class="pr-4"><b>Kilometraje:</b></td>
+						<td>{{ object.kilometraje }}</td>
+					</tr>
+				</table>
 				{% if user.is_staff %}
 				<input type="button" class="btn btn-success btn-lg" onclick="location.href='./editar/';" value="Editar" />
 				<input type="button" class="btn btn-danger btn-lg" onclick="location.href='./eliminar/';" value="Eliminar" />
 				{% endif %}
 				<input type="button" class="btn btn-secondary btn-lg" onclick="location.href='../';" value="Volver a la lista" />
-				</p>
 			</div>
 		</div>
-	</div>
-	<div class="column px-4">
 		<div class="card px-4">
 			<div class="card-body">
 				<h2> Atenciones </h2>
@@ -37,7 +57,12 @@
 				{% endif %}
 				<p><input type="button" class="btn btn-primary btn-lg" onclick="location.href='./atenciones/crear/';" value="Agregar atención" /></p>
 			</div>
-		</div>	
+		</div>
+	</div>
+	<div class="column px-4">
+		{% if object.imagen %}
+		<a href="{{ object.imagen.url }}"><img src="{{ object.imagen.url }}" class="img-fluid img-thumbnail" style="height:320px" /></a>
+		{% endif %}
 	</div>
 </div>
 {% endblock %}
