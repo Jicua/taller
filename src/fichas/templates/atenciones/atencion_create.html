@@ -18,8 +18,8 @@
 		</div>
 		<div class="col">
 			<p>(Opcional)</p>
-			<p>Fecha de salida: <input type="date" name="fecha_salida" value="{{ obj.fecha_salida }}"></p>
-			<p>Hora de salida: <input type="time" name="hora_salida" value="{{ obj.hora_salida }}"></p>
+			<p>Fecha de salida: <input type="date" name="fecha_salida" value="{{ obj.fecha_salida|date:'Y-m-d' }}"></p>
+			<p>Hora de salida: <input type="time" name="hora_salida" value="{{ obj.hora_salida|time:'H:i' }}"></p>
 		</div>
 	</div>
 	<p>Estado:</p>

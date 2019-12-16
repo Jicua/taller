@@ -147,7 +147,7 @@ class RawAtencionForm(forms.Form):
 
 class DetalleForm(forms.ModelForm):
 	descripcion = forms.CharField(widget=forms.Textarea(attrs={"placeholder": "Ingrese descripción"}))
-	repuesto 	= forms.CharField(widget=forms.TextInput(attrs={"placeholder": "Ingrese repuesto"}))
+	repuesto 	= forms.CharField(required=False, widget=forms.TextInput(attrs={"placeholder": "Ingrese repuesto"}))
 
 	class Meta:
 		model = Detalle

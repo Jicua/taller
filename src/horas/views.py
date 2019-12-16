@@ -214,3 +214,13 @@ def admin_view(request, *args, **kwargs):
 		'horas': horas
 	}
 	return render(request, "horas_admin.html", context)
+
+def admin_view_todas(request, *args, **kwargs):
+	horas = Hora.objects.all().order_by('fecha', 'bloque')
+	listado_horas = []
+	for hora in horas:
+		listado_horas.append(hora)
+	context = {
+		'horas': horas
+	}
+	return render(request, "horas_admin_todas.html", context)

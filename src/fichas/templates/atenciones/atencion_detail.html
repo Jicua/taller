@@ -31,7 +31,7 @@
 				<div class="row">
 					<div class="column px-3">
 						<p> <b>Fecha de entrada:</b> {{ object.fecha_entrada }} </p>
-						<p> <b>Hora de entrada:</b> {{ object.hora_entrada }} </p>
+						<p> <b>Hora de entrada:</b>{% if object.hora_entrada %} {{ object.hora_entrada }} {% else %} ----- {% endif %} </p>
 					</div>
 					<div class="column px-3">
 						<p> <b>Fecha de salida:</b>{% if object.fecha_salida %} {{ object.fecha_salida }} {% else %} ----- {% endif %}</p>

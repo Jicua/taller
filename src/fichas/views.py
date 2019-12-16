@@ -385,16 +385,16 @@ def revisar_view(request):
 @login_required
 def detalle_create_view(request, id, at):
 	form = DetalleForm(request.POST or None, request.FILES or None)
-	if form.is_valid():
-		form.save()
-		form = DetalleForm()
-		return redirect('../')
 	atencion = get_object_or_404(Atencion, id=at)
 	context = {
 		'form': form,
 		'atencion': atencion,
 		'back': atencion.get_absolute_url()
 	}
+	if form.is_valid():
+		form.save()
+		form = DetalleForm()
+		return redirect(atencion.get_absolute_url())
 	return render(request, "detalles/detalle_create.html", context)
 
 @login_required
