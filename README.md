@@ -1,6 +1,5 @@
-Seminario de Grado
-------------------
-Proyecto de Título INACAP 2019
+Django based automotive workshop administration website
 
-- Javier Quappe - Líder de proyecto, documentador
-- Felipe Suárez - Administrador de gestión
+# Features:
+- Data keeping for customers, vehicles and attentions
+- Weekly appointment system
