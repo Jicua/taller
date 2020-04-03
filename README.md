@@ -1,5 +1,5 @@
-Django based automotive workshop administration website
+Django based website for automotive workshop administration 
 
-# Features:
+## Features:
 - Data keeping for customers, vehicles and attentions
 - Weekly appointment system
